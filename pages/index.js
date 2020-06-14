@@ -1,4 +1,4 @@
-import { React } from 'react';
+import 'normalize.css';
 
 const Index = () => {
     return 'I am still Working';
