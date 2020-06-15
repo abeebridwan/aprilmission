@@ -8,7 +8,6 @@ export const Container = styled.div`
     &:hover a.prev {
       left: 20px;
     }
-
     &:hover a.next {
       right: 20px;
     }
@@ -25,7 +24,6 @@ const fade = keyframes`
 `;
 export const Slide = styled.div`
   display: none;
-
   &.fade {
     animation: ${fade} 2s;
   }
@@ -52,7 +50,6 @@ export const Image = styled.picture`
         height: 550px;
       }
     }
-
     @media (min-width: 600px) {
       & {
         height: 650px;
@@ -100,7 +97,6 @@ export const Link = styled.a`
     &.next {
       display: block;
     }
-
     &.prev {
       display: block;
     }
