@@ -1,4 +1,10 @@
+/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import { Container, ButtonLink, Logo, Text, Link, Group, Icon, Frame, MainHeader, SmallGroup } from './styles/header';
+
+const propTypes = {
+  children: PropTypes.elementType.isRequired,
+};
 
 export default function Header({ children, ...restProps }) {
   return <MainHeader {...restProps}>{children}</MainHeader>;
@@ -28,7 +34,7 @@ Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
 
-Header.Icon = function HeaderIcon({ src, children, ...restProps }) {
+Header.Icon = function HeaderIcon({ children, ...restProps }) {
   return <Icon {...restProps}>{children}</Icon>;
 };
 
@@ -39,3 +45,5 @@ Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
 Header.SmallGroup = function HeaderSmallGroup({ children, ...restProps }) {
   return <SmallGroup {...restProps}>{children}</SmallGroup>;
 };
+
+Header.propTypes = propTypes;
