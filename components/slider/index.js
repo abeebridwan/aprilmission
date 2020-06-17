@@ -4,6 +4,7 @@ import { Container, Slide, Text, Link, Number, Image, Dot, Span, Title, SubTitle
 export default function Slider({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
+
 Slider.Slide = function SliderSlide({ children, ...restProps }) {
   return <Slide {...restProps}>{children}</Slide>;
 };
@@ -15,7 +16,7 @@ Slider.Number = function SliderNumber({ children, ...restProps }) {
 Slider.Image = function SliderImage({ src, firstSrc, secondSrc, ...restProps }) {
   return (
     <Image {...restProps}>
-      <source media="(min-width:690px)" srcSet={secondSrc} />
+      <source media="(min-width:788px)" srcSet={secondSrc} />
       <source media="(min-width:415px)" srcSet={firstSrc} />
       <img src={src} alt="beautiful girl" />
     </Image>

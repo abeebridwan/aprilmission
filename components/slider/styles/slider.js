@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components/macro';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
@@ -43,7 +43,7 @@ export const Image = styled.picture`
     height: 500px;
     width: 1599px;
     filter: grayscale(90%);
-    filter: brightness(62%);
+    filter: brightness(40%);
 
     @media (min-width: 415px) {
       & {
@@ -131,7 +131,7 @@ export const Dot = styled.div`
       display: none;
     }
   }
-  @media (max-width: 199px) {
+  @media (max-width: 261px) {
     & {
       display: none;
     }
@@ -148,7 +148,7 @@ const move = keyframes`
 
 export const Text = styled.div`
   color: #f2f2f2;
-  font-size: 11px;
+  font-size: 15px;
   position: absolute;
   top: 35%;
   width: 85%;
@@ -184,14 +184,13 @@ export const Title = styled.h2`
   @media (min-width: 660px) {
     & {
       font-size: 45px;
-      line-height: 3.5rem;
     }
   }
 `;
 
 export const SubTitle = styled.p`
   margin: 0;
-  padding: 2px;
+  padding: 1px 0 0 0;
   &:first-of-type {
     margin-top: 5px;
   }
@@ -206,7 +205,7 @@ export const SubTitle = styled.p`
 export const Button = styled.button`
   background-color: rgb(248, 127, 75);
   margin-top: 15px;
-  font-weight: 600;
+  font-weight: 650;
   padding: 8px 12px 9px;
   border-radius: 5px;
   display: inline-block;

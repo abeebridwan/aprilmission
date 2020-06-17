@@ -10,16 +10,17 @@
     "start": "next start"
   },
   "dependencies": {
-    "fuse.js": "^6.4.6",
-    "next": "^10.2.0",
+    "next": "latest",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "styled-components": "^5.2.3"
+    "react-swipeable": "^6.1.0",
+    "styled-components": "latest"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "latest",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
