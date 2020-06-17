@@ -11,9 +11,16 @@ export default function HeaderContainer({ children }) {
     <Header>
       <Header.Frame>
         <Header.Container>
+          <Header.Group>
+            <Header.Text>+2347065654046</Header.Text>
+            <Header.Text>aprilmission@gmail.com</Header.Text>
+          </Header.Group>
           <Header.Group />
         </Header.Container>
-        {/* <Header.Logo src={logo} alt="April Mission Logo" /> */}
+        <Header.Container>
+          <Header.Group>{/* <Header.Logo src={logo} alt="April Mission Logo" /> */}</Header.Group>
+          <Header.Group />
+        </Header.Container>
       </Header.Frame>
       {children}
     </Header>

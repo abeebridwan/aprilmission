@@ -33,7 +33,6 @@ class MyDocument extends Document {
         lang="en"
         style={{
           height: '100%',
-          lineHeight: 1.5,
           color: '#545454',
         }}
       >

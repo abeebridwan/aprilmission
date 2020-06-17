@@ -6,7 +6,8 @@
     "secondSrc": "/slide_1-big.jpg",
     "title":"Let's be Kind for",
     "SubTitle1":"They just want to Learn",
-    "SubTitle2":"Give them a chance by contributing"
+    "SubTitle2":"Give them a chance by contributing",
+    "alt":"a beautiful girl"
   },
   {
     "id":2,
@@ -15,7 +16,8 @@
     "secondSrc": "/slide_2-big.jpg",
     "title":"Share a Little for",
     "SubTitle1": "1 dollar can save a child",
-    "SubTitle2": "Little can make a difference"
+    "SubTitle2": "Little can make a difference",
+    "alt":"a group of happy children smilling at the camera"
   },
   {
     "id":3,
@@ -24,7 +26,8 @@
     "secondSrc": "/slide_3-big.jpg",
     "title":"Let's be Kind for",
     "SubTitle1":"Can u imagine this...",
-    "SubTitle2":"You can change it"
+    "SubTitle2":"You can change it",
+    "alt":"a group of children sitting on the floor in a outside classroom"
   },
   {
     "id":4,
@@ -33,6 +36,7 @@
     "secondSrc": "/slide_4-big.jpg",
     "title":"Share a Little for",
     "SubTitle1":"They just want to Learn",
-    "SubTitle2":"Give them a chance by contributing"
+    "SubTitle2":"Give them a chance by contributing",
+    "alt":"a group of happy children having class under a tree"
   }
 ]

@@ -45,7 +45,7 @@ export default function SliderContainer() {
       <Slider>
         {sliderData.map((item) => (
           <Slider.Slide className="mySlides fade" key={item.id}>
-            <Slider.Image src={item.src} firstSrc={item.firstSrc} secondSrc={item.secondSrc} />
+            <Slider.Image src={item.src} firstSrc={item.firstSrc} secondSrc={item.secondSrc} alt={item.alt} />
             <Slider.Text title={item.title} subTitle1={item.SubTitle1} subTitle2={item.SubTitle2} />
           </Slider.Slide>
         ))}

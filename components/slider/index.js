@@ -13,12 +13,12 @@ Slider.Number = function SliderNumber({ children, ...restProps }) {
   return <Number {...restProps}>{children}</Number>;
 };
 
-Slider.Image = function SliderImage({ src, firstSrc, secondSrc, ...restProps }) {
+Slider.Image = function SliderImage({ src, firstSrc, secondSrc, alt, ...restProps }) {
   return (
     <Image {...restProps}>
       <source media="(min-width:788px)" srcSet={secondSrc} />
       <source media="(min-width:415px)" srcSet={firstSrc} />
-      <img src={src} alt="beautiful girl" />
+      <img src={src} alt={alt} />
     </Image>
   );
 };
