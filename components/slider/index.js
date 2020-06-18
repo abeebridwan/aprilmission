@@ -31,7 +31,7 @@ Slider.Text = function SliderText({ title, subTitle1, subTitle2, children, ...re
       <Slider.SubTitle>{subTitle1}</Slider.SubTitle>
       <Slider.SubTitle>{subTitle2}</Slider.SubTitle>
       <Slider.SubTitle>You can be satisfied by helping others</Slider.SubTitle>
-      <Slider.Button>Donate Now!</Slider.Button>
+      <Slider.Button>Donate Now</Slider.Button>
       <Slider.Button>Know More</Slider.Button>
       {children}
     </Text>
@@ -58,6 +58,10 @@ Slider.SubTitle = function SliderSubTitle({ children, ...restProps }) {
   return <SubTitle {...restProps}>{children}</SubTitle>;
 };
 
-Slider.Button = function SliderButton({ children, ...restProps }) {
-  return <Button {...restProps}>{children}</Button>;
+Slider.Button = function SliderButton({ header, children, ...restProps }) {
+  return (
+    <Button header={header} {...restProps}>
+      {children}
+    </Button>
+  );
 };

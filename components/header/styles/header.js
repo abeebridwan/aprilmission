@@ -14,6 +14,7 @@ export const Frame = styled.div`
 `;
 
 export const Group = styled.div`
+  color: white;
   &:first-of-type {
     display: flex;
     justify-content: center;
@@ -21,9 +22,16 @@ export const Group = styled.div`
     flex-direction: column;
     align-content: center;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    width: 50%;
+    width: 60%;
     font-family: 'Open Sans sans-serif';
     color: white;
+  }
+  &:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 40%;
   }
 `;
 
@@ -39,7 +47,7 @@ export const Container = styled.div`
 
 export const Text = styled.p`
   margin: 0;
-  padding: 0;
+  padding: 4px 0;
   font-size: 13px;
 `;
 

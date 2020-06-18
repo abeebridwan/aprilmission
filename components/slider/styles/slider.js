@@ -204,21 +204,21 @@ export const SubTitle = styled.p`
 
 export const Button = styled.button`
   background-color: rgb(248, 127, 75);
-  margin-top: 15px;
+  margin-top: ${({ header }) => (header ? '0' : '15px')};
   font-weight: 650;
-  padding: 8px 12px 9px;
+  padding: ${({ header }) => (header ? '0px 6px' : '8px 12px 9px')};
   border-radius: 5px;
   display: inline-block;
   border: 0;
-  height: 35px;
+  height: ${({ header }) => (header ? '32px' : '35px')};
   cursor: pointer;
   font-size: 0.9rem;
-  margin-right: 4px;
+  margin-right: ${({ header }) => (header ? '0' : '4px')};
   color: inherit;
   overflow: hidden;
   @media (min-width: 414px) {
     & {
-      margin-top: 22px;
+      margin-top: ${({ header }) => (header ? '0' : '22px')};
       font-size: 1rem;
       height: 40px;
     }
