@@ -203,19 +203,24 @@ export const SubTitle = styled.p`
 `;
 
 export const Button = styled.button`
-  background-color: rgb(248, 127, 75);
+  background-color: ${({ bg }) => (bg ? 'transparent' : 'rgb(248, 127, 75)')};
   margin-top: ${({ header }) => (header ? '0' : '15px')};
   font-weight: 650;
   padding: ${({ header }) => (header ? '0px 6px' : '8px 12px 9px')};
   border-radius: 5px;
   display: inline-block;
-  border: 0;
+  border: ${({ bg }) => (bg ? '1px solid #fff' : '0')};
   height: ${({ header }) => (header ? '32px' : '35px')};
   cursor: pointer;
   font-size: 0.9rem;
   margin-right: ${({ header }) => (header ? '0' : '4px')};
   color: inherit;
   overflow: hidden;
+
+  &:hover {
+    background-color: rgb(248, 127, 75);
+    cursor: pointer;
+  }
   @media (min-width: 414px) {
     & {
       margin-top: ${({ header }) => (header ? '0' : '22px')};

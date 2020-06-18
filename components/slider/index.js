@@ -32,7 +32,7 @@ Slider.Text = function SliderText({ title, subTitle1, subTitle2, children, ...re
       <Slider.SubTitle>{subTitle2}</Slider.SubTitle>
       <Slider.SubTitle>You can be satisfied by helping others</Slider.SubTitle>
       <Slider.Button>Donate Now</Slider.Button>
-      <Slider.Button>Know More</Slider.Button>
+      <Slider.Button bg="none">Know More</Slider.Button>
       {children}
     </Text>
   );
