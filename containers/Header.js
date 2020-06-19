@@ -14,17 +14,21 @@ export default function HeaderContainer({ children }) {
     <Header>
       <Header.Frame>
         <Header.Container>
-          <Header.Group>
-            <Header.Text>
-              <FontAwesomeIcon icon={faPhoneAlt} transform="shrink-3 left-2" />
-              +2347065654046
-            </Header.Text>
-            <Header.Text>
-              <FontAwesomeIcon icon={faEnvelope} transform="shrink-3 left-2" />
-              aprilmission@gmail.com
-            </Header.Text>
+          <Header.Group id="one">
+            <Header.SmallGroup>
+              <Header.Text>
+                <FontAwesomeIcon icon={faPhoneAlt} transform="shrink-3 left-2" />
+                +2347065654046
+              </Header.Text>
+            </Header.SmallGroup>
+            <Header.SmallGroup>
+              <Header.Text>
+                <FontAwesomeIcon icon={faEnvelope} transform="shrink-3 left-2" />
+                aprilmission@gmail.com
+              </Header.Text>
+            </Header.SmallGroup>
           </Header.Group>
-          <Header.Group>
+          <Header.Group id="two">
             <Slider.Button header="header">Donate Now</Slider.Button>
           </Header.Group>
         </Header.Container>

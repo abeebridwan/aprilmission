@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: 100%;
   position: relative;
   margin: auto;
+  overflow-x: hidden;
   @media (min-width: 800px) {
     &:hover a.prev {
       left: 20px;
@@ -59,47 +60,39 @@ export const Image = styled.picture`
 `;
 
 export const Link = styled.a`
-  cursor: pointer;
-  position: absolute;
-  top: 45%;
-  margin-top: -15px;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  transition: 0.6s ease;
-  user-select: none;
   display: none;
-  transition: all 0.5s;
-  text-align: center;
+  @media (min-width: 800px) {
+    & {
+      cursor: pointer;
+      position: absolute;
+      top: 45%;
+      margin-top: -15px;
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      transition: 0.6s ease;
+      user-select: none;
+      display: block;
+      transition: all 0.5s;
+      text-align: center;
+      line-height: 1.4;
+      background-color: rgb(248, 127, 75, 0.5);
+      width: 55px;
+      height: 48px;
+      z-index: 10;
+      border-radius: 50%;
+    }
+  }
   &.next {
     right: -100px;
-    background-color: rgb(248, 127, 75, 0.5);
-    width: 55px;
-    height: 48px;
-    z-index: 10;
-    border-radius: 50%;
   }
 
   &.prev {
     left: -100px;
-    background-color: rgb(248, 127, 75, 0.5);
-    width: 55px;
-    height: 48px;
-    z-index: 10;
-    border-radius: 50%;
   }
   &.prev:hover,
   &.next:hover {
     background-color: rgb(248, 127, 75);
-  }
-
-  @media (min-width: 800px) {
-    &.next {
-      display: block;
-    }
-    &.prev {
-      display: block;
-    }
   }
 `;
 
@@ -225,14 +218,15 @@ export const Button = styled.button`
     & {
       margin-top: ${({ header }) => (header ? '0' : '22px')};
       font-size: 1rem;
-      height: 40px;
+      height: ${({ header }) => (header ? '35px' : '40px')};
+      padding: ${({ header }) => (header ? '0px 10px' : '8px 12px 9px')};
     }
   }
   @media (min-width: 660px) {
     & {
-      margin-top: 30px;
+      margin-top: ${({ header }) => (header ? '0' : '30px')};
       font-size: 1rem;
-      height: 40px;
+      height: ${({ header }) => (header ? '35px' : '40px')};
     }
   }
 `;

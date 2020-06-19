@@ -36,8 +36,8 @@ export default function SliderContainer() {
   });
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => setslideIndex(slideIndex + 1),
-    onSwipedRight: () => setslideIndex(slideIndex - 1),
+    onSwipedLeft: () => setslideIndex(slideIndex - 1),
+    onSwipedRight: () => setslideIndex(slideIndex + 1),
   });
 
   return (
