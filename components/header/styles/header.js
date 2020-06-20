@@ -22,7 +22,7 @@ export const Group = styled.div`
   color: white;
   overflow: hidden;
   &#one {
-    padding-top: 5px;
+    padding: 5px 0 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,14 +38,43 @@ export const Group = styled.div`
         border-right: none;
       }
     }
+    @media (min-width: 800px) {
+      & {
+        width: 55%;
+        position: relative;
+        left: 15%;
+        justify-content: flex-start;
+      }
+    }
   }
   &#two {
-    padding-top: 5px;
+    padding: 5px 0 3px;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     flex-grow: 1;
+  }
+  &#three {
+    @media (min-width: 800px) {
+      & {
+        width: 55%;
+        position: relative;
+        left: 15%;
+      }
+    }
+  }
+  &#four {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    & svg {
+      margin-right: 15px;
+      background-color: rgb(248, 127, 75);
+      padding: 7px 10px;
+      border-radius: 3px;
+    }
   }
 `;
 export const SmallGroup = styled.div`
@@ -58,6 +87,7 @@ export const SmallGroup = styled.div`
   @media (min-width: 660px) {
     &:first-of-type {
       border-right: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px 15px 15px 0;
     }
     & {
       padding: 15px;
@@ -65,15 +95,43 @@ export const SmallGroup = styled.div`
   }
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  width: 40px;
+  height: 40px;
+  margin-left: 13px;
+  max-width: 100%;
+  @media (min-width: 800px) {
+    & {
+      margin-left: 0px;
+    }
+  }
+`;
+export const LogoText = styled.h2`
+  margin: 1rem 0;
+  & span#logoColor {
+    margin-left: 4px;
+    color: #c54b8c;
+  }
+`;
 
+export const LogoGroup = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  @media (min-width: 800px) {
+    & {
+      position: relative;
+      justify-content: flex-start;
+    }
+  }
+`;
 export const Text = styled.p`
   margin: 0;
   padding: 3px 0;
-  font-size: 13px;
+  font-size: 12.5px;
   @media (min-width: 414px) {
     & {
-      font-size: 15px;
       font-weight: 505;
     }
   }

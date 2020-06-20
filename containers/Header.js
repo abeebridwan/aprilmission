@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* import PropTypes from 'prop-types'; */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhoneAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import Header from '../components/header/index';
 import Slider from '../components/slider/index';
 /* 
@@ -17,13 +17,13 @@ export default function HeaderContainer({ children }) {
           <Header.Group id="one">
             <Header.SmallGroup>
               <Header.Text>
-                <FontAwesomeIcon icon={faPhoneAlt} transform="shrink-3 left-2" />
+                <FontAwesomeIcon icon={faPhoneAlt} transform="shrink-2 left-2" />
                 +2347065654046
               </Header.Text>
             </Header.SmallGroup>
             <Header.SmallGroup>
               <Header.Text>
-                <FontAwesomeIcon icon={faEnvelope} transform="shrink-3 left-2" />
+                <FontAwesomeIcon icon={faEnvelope} transform="shrink-2 left-2" />
                 aprilmission@gmail.com
               </Header.Text>
             </Header.SmallGroup>
@@ -33,8 +33,18 @@ export default function HeaderContainer({ children }) {
           </Header.Group>
         </Header.Container>
         <Header.Container>
-          <Header.Group>{/* <Header.Logo src={logo} alt="April Mission Logo" /> */}</Header.Group>
-          <Header.Group />
+          <Header.Group id="three">
+            <Header.LogoGroup title="April Mission Foundation">
+              <Header.Logo alt="April Mission Logo" />
+              <Header.LogoText>
+                April
+                <span id="logoColor">M</span>
+              </Header.LogoText>
+            </Header.LogoGroup>
+          </Header.Group>
+          <Header.Group id="four">
+            <FontAwesomeIcon icon={faBars} size="lg" />
+          </Header.Group>
         </Header.Container>
       </Header.Frame>
       {children}

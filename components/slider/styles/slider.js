@@ -65,7 +65,7 @@ export const Link = styled.a`
     & {
       cursor: pointer;
       position: absolute;
-      top: 45%;
+      top: 60%;
       margin-top: -15px;
       color: white;
       font-weight: bold;
@@ -130,7 +130,7 @@ export const Dot = styled.div`
     }
   }
 `;
-const move = keyframes`
+const moveOne = keyframes`
   from {
     left: -70%;
   }
@@ -138,15 +138,23 @@ const move = keyframes`
     left: 10%;
   }
 `;
+const movetwo = keyframes`
+  from {
+    left: -70%;
+  }
+  to {  
+    left: 15.35%;
+  }
+`;
 
 export const Text = styled.div`
   color: #f2f2f2;
   font-size: 15px;
   position: absolute;
-  top: 35%;
+  top: 42%;
   width: 85%;
   text-align: left;
-  animation: ${move} 5s forwards;
+  animation: ${moveOne} 5s forwards;
   @media (min-width: 414px) {
     & {
       font-size: 16px;
@@ -157,6 +165,12 @@ export const Text = styled.div`
     & {
       font-size: 16px;
       width: 55%;
+    }
+  }
+  @media (min-width: 800px) {
+    & {
+      animation: ${movetwo} 5s forwards;
+      top: 45%;
     }
   }
 `;
@@ -225,6 +239,7 @@ export const Button = styled.button`
   @media (min-width: 660px) {
     & {
       margin-top: ${({ header }) => (header ? '0' : '30px')};
+      margin-right: ${({ header }) => (header ? '-50px' : '4px')};
       font-size: 1rem;
       height: ${({ header }) => (header ? '35px' : '40px')};
     }
