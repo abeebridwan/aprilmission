@@ -2,14 +2,18 @@
 /* import PropTypes from 'prop-types'; */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhoneAlt, faBars } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
 import Header from '../components/header/index';
 import Slider from '../components/slider/index';
-/* 
+import listData from '../fixtures/listData';
+/*
 const propTypes = {
   children: PropTypes.elementType.isRequired,
 };
  */
 export default function HeaderContainer({ children }) {
+  const [ShowList, setShowList] = useState(false);
+
   return (
     <Header>
       <Header.Frame>
@@ -43,8 +47,21 @@ export default function HeaderContainer({ children }) {
             </Header.LogoGroup>
           </Header.Group>
           <Header.Group id="four">
-            <FontAwesomeIcon icon={faBars} size="lg" />
+            <FontAwesomeIcon
+              icon={faBars}
+              size="lg"
+              onClick={() => {
+                setShowList(!ShowList);
+              }}
+            />
           </Header.Group>
+        </Header.Container>
+        <Header.Container showList={ShowList}>
+          <Header.List>
+            {listData.map((item) => (
+              <Header.Link key={item.id}>{item.text}</Header.Link>
+            ))}
+          </Header.List>
         </Header.Container>
       </Header.Frame>
       {children}

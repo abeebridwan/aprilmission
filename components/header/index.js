@@ -2,7 +2,7 @@
 /* import PropTypes from 'prop-types'; */
 import {
   Container,
-  ButtonLink,
+  List,
   Logo,
   Text,
   Link,
@@ -27,8 +27,12 @@ Header.Frame = function HeaderFrame({ children, ...restProps }) {
   return <Frame {...restProps}>{children}</Frame>;
 };
 
-Header.Container = function HeaderContainer({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
+Header.Container = function HeaderContainer({ showList, children, ...restProps }) {
+  return (
+    <Container showList={showList} {...restProps}>
+      {children}
+    </Container>
+  );
 };
 
 Header.Group = function HeaderGroup({ children, ...restProps }) {
@@ -39,16 +43,20 @@ Header.Text = function HeaderText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 };
 
-Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
-  return <Link {...restProps}>{children}</Link>;
+Header.Link = function HeaderLink({ children, ...restProps }) {
+  return (
+    <Link {...restProps}>
+      <a href="/#">{children}</a>
+    </Link>
+  );
 };
 
 Header.Icon = function HeaderIcon({ children, ...restProps }) {
   return <Icon {...restProps}>{children}</Icon>;
 };
 
-Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {
-  return <ButtonLink {...restProps}>{children}</ButtonLink>;
+Header.List = function HeaderList({ children, ...restProps }) {
+  return <List {...restProps}>{children}</List>;
 };
 
 Header.SmallGroup = function HeaderSmallGroup({ children, ...restProps }) {

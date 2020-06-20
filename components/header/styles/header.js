@@ -15,6 +15,9 @@ export const Container = styled.div`
   &:first-of-type {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
+  &:last-of-type {
+    display: ${({ showList }) => (showList === true ? 'flex' : 'none')};
+  }
   display: flex;
 `;
 
@@ -136,9 +139,30 @@ export const Text = styled.p`
     }
   }
 `;
+export const List = styled.ul`
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  font-weight: 505;
+  margin: 0 !important;
+  padding: 0;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+`;
 
-export const Link = styled.a``;
-
-export const ButtonLink = styled.button``;
+export const Link = styled.li`
+  text-align: center;
+  padding: 18px 0px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  width: 25%;
+  & a {
+    width: 100%;
+  }
+  & a:link,
+  & a:visited {
+    text-decoration: none;
+    color: white;
+  }
+`;
 
 export const Icon = styled.span``;
