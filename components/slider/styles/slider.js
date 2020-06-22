@@ -42,7 +42,7 @@ export const Image = styled.picture`
   & img {
     max-width: 100%;
     height: 500px;
-    width: 1599px;
+    width: 1900px;
     filter: grayscale(90%);
     filter: brightness(40%);
 

@@ -55,8 +55,12 @@ Header.Icon = function HeaderIcon({ children, ...restProps }) {
   return <Icon {...restProps}>{children}</Icon>;
 };
 
-Header.List = function HeaderList({ children, ...restProps }) {
-  return <List {...restProps}>{children}</List>;
+Header.List = function HeaderList({ topList, children, ...restProps }) {
+  return (
+    <List topList={topList} {...restProps}>
+      {children}
+    </List>
+  );
 };
 
 Header.SmallGroup = function HeaderSmallGroup({ children, ...restProps }) {

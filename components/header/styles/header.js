@@ -61,7 +61,7 @@ export const Group = styled.div`
   &#three {
     @media (min-width: 800px) {
       & {
-        width: 55%;
+        width: 30%;
         position: relative;
         left: 15%;
       }
@@ -77,6 +77,11 @@ export const Group = styled.div`
       background-color: rgb(248, 127, 75);
       padding: 7px 10px;
       border-radius: 3px;
+      @media (min-width: 800px) {
+        & {
+          display: none;
+        }
+      }
     }
   }
 `;
@@ -141,13 +146,21 @@ export const Text = styled.p`
 `;
 export const List = styled.ul`
   list-style-type: none;
-  display: flex;
+  display: ${({ topList }) => (topList ? 'none' : 'flex')};
   width: 100%;
   font-weight: 505;
   margin: 0 !important;
   padding: 0;
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  @media (min-width: 800px) {
+    & {
+      height: 100%;
+      border-top: none;
+      position: relative;
+      display: flex;
+    }
+  }
 `;
 
 export const Link = styled.li`

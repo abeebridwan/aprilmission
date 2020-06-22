@@ -54,6 +54,11 @@ export default function HeaderContainer({ children }) {
                 setShowList(!ShowList);
               }}
             />
+            <Header.List topList="topList">
+              {listData.map((item) => (
+                <Header.Link key={item.id}>{item.text}</Header.Link>
+              ))}
+            </Header.List>
           </Header.Group>
         </Header.Container>
         <Header.Container showList={ShowList}>
