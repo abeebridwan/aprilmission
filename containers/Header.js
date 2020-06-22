@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* import PropTypes from 'prop-types'; */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhoneAlt, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhoneAlt, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
 import Header from '../components/header/index';
 import Slider from '../components/slider/index';
@@ -46,9 +46,9 @@ export default function HeaderContainer({ children }) {
               </Header.LogoText>
             </Header.LogoGroup>
           </Header.Group>
-          <Header.Group id="four">
+          <Header.Group id="four" showList={ShowList}>
             <FontAwesomeIcon
-              icon={faBars}
+              icon={ShowList ? faTimes : faBars}
               size="lg"
               onClick={() => {
                 setShowList(!ShowList);

@@ -74,7 +74,7 @@ export const Group = styled.div`
     flex-grow: 1;
     & svg {
       margin-right: 15px;
-      background-color: rgb(248, 127, 75);
+      background-color: ${({ showList }) => (showList ? 'rgb(248, 127, 75, 0.5)' : 'rgb(248, 127, 75)')};
       padding: 7px 10px;
       border-radius: 3px;
       @media (min-width: 800px) {
@@ -158,7 +158,7 @@ export const List = styled.ul`
       height: 100%;
       border-top: none;
       position: relative;
-      display: flex;
+      display: ${({ topList }) => (topList ? 'flex' : 'none')};
     }
   }
 `;
@@ -168,6 +168,9 @@ export const Link = styled.li`
   padding: 18px 0px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   width: 25%;
+  &:hover {
+    background-color: rgb(248, 127, 75, 0.5);
+  }
   & a {
     width: 100%;
   }

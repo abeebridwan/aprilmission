@@ -35,8 +35,12 @@ Header.Container = function HeaderContainer({ showList, children, ...restProps }
   );
 };
 
-Header.Group = function HeaderGroup({ children, ...restProps }) {
-  return <Group {...restProps}>{children}</Group>;
+Header.Group = function HeaderGroup({ showList, children, ...restProps }) {
+  return (
+    <Group showList={showList} {...restProps}>
+      {children}
+    </Group>
+  );
 };
 
 Header.Text = function HeaderText({ children, ...restProps }) {
