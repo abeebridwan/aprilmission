@@ -1,11 +1,13 @@
 import 'normalize.css';
 import HeaderContainer from '../containers/Header';
 import SliderContainer from '../containers/Slider';
+import ModalContainer from '../containers/Modal';
 
 export default function Index() {
   return (
     <HeaderContainer>
       <SliderContainer />
+      <ModalContainer />
     </HeaderContainer>
   );
 }
