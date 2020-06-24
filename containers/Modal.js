@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/prop-types */
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,7 +20,40 @@ export default function ModalContainer({ children }) {
             }}
           />
         </Modal.Header>
-        <Modal.Body>I am fine</Modal.Body>
+        <Modal.Body>
+          <div>
+            <pre>
+              <em>Together We are making a difference!</em>
+            </pre>
+            <h3>Account Information</h3>
+            <dl>
+              <dt>
+                <strong>Account Name:</strong>
+              </dt>
+              <dd>April Mission Foundation</dd>
+              <dt>
+                <strong>Account Number: </strong>
+              </dt>
+              <dd>1023939955</dd>
+              <dt>
+                <strong>Account Bank: </strong>
+              </dt>
+              <dd>UBA</dd>
+            </dl>
+
+            <p>
+              With deepest gratitude and warmest wishes, We thank you on behalf of all the children that your donation
+              will impact.
+            </p>
+            <br />
+            <p>
+              <em>
+                Note: We are currently unable to take payment directly online, and we are working to make that possible.
+                Thank you for your patience
+              </em>
+            </p>
+          </div>
+        </Modal.Body>
       </Modal.Content>
       {children}
     </Modal>

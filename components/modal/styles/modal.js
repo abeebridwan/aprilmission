@@ -77,15 +77,73 @@ export const Header = styled.div`
 `;
 
 export const Body = styled.div`
-  margin-top: 5vh;
+  overflow: scroll;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 17px;
+  font-size: 12px;
+  margin-top: 3vw;
+  padding: 2px;
+  color: black;
+  font-weight: 700;
   width: 80%;
   height: 75%;
   background-color: white;
+  background-image: url('/maize.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 5px;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  &::-webkit-scrollbar-corner {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.26);
+    pointer-events: none;
+  }
+  @media (min-width: 415px) {
+    & {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      font-size: 15px;
+      padding: 7px;
+    }
+  }
   @media (min-width: 650px) {
     & {
+      overflow-x: scroll;
+      overflow-y: hidden;
       width: 60%;
-      height: 83%;
+      height: 75%;
+      font-size: 20px;
+      padding: 20px;
     }
   }
   animation: ${fadeIn} 0.4s;
