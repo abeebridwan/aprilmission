@@ -1,8 +1,15 @@
 /* eslint-disable react/prop-types */
+import { useContext } from 'react';
 import { Container, Content, Header, Body } from './styles/modal';
+import { ToggleContext } from '../../context/modal';
 
 export default function Modal({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
+  const { ShowModal } = useContext(ToggleContext);
+  return (
+    <Container showModal={ShowModal} {...restProps}>
+      {children}
+    </Container>
+  );
 }
 
 Modal.Content = function ModalContent({ children, ...restProps }) {

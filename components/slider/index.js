@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { useContext } from 'react';
+import { ToggleContext } from '../../context/modal';
 import { Container, Slide, Text, Link, Number, Image, Dot, Span, Title, SubTitle, Button } from './styles/slider';
 
 export default function Slider({ children, ...restProps }) {
@@ -24,6 +26,7 @@ Slider.Image = function SliderImage({ src, firstSrc, secondSrc, alt, ...restProp
 };
 
 Slider.Text = function SliderText({ title, subTitle1, subTitle2, children, ...restProps }) {
+  const { ShowModal, setShowModal } = useContext(ToggleContext);
   return (
     <Text {...restProps}>
       <Slider.Title>{title}</Slider.Title>
@@ -31,7 +34,13 @@ Slider.Text = function SliderText({ title, subTitle1, subTitle2, children, ...re
       <Slider.SubTitle>{subTitle1}</Slider.SubTitle>
       <Slider.SubTitle>{subTitle2}</Slider.SubTitle>
       <Slider.SubTitle>You can be satisfied by helping others</Slider.SubTitle>
-      <Slider.Button>Donate Now</Slider.Button>
+      <Slider.Button
+        onClick={() => {
+          setShowModal(!ShowModal);
+        }}
+      >
+        Donate Now
+      </Slider.Button>
       <Slider.Button bg="none">Know More</Slider.Button>
       {children}
     </Text>

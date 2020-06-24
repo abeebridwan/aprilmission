@@ -2,10 +2,11 @@
 /* import PropTypes from 'prop-types'; */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhoneAlt, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Header from '../components/header/index';
 import Slider from '../components/slider/index';
 import listData from '../fixtures/listData';
+import { ToggleContext } from '../context/modal';
 /*
 const propTypes = {
   children: PropTypes.elementType.isRequired,
@@ -13,7 +14,7 @@ const propTypes = {
  */
 export default function HeaderContainer({ children }) {
   const [ShowList, setShowList] = useState(false);
-
+  const { ShowModal, setShowModal } = useContext(ToggleContext);
   return (
     <Header>
       <Header.Frame>
@@ -33,7 +34,14 @@ export default function HeaderContainer({ children }) {
             </Header.SmallGroup>
           </Header.Group>
           <Header.Group id="two">
-            <Slider.Button header="header">Donate Now</Slider.Button>
+            <Slider.Button
+              header="header"
+              onClick={() => {
+                setShowModal(!ShowModal);
+              }}
+            >
+              Donate Now
+            </Slider.Button>
           </Header.Group>
         </Header.Container>
         <Header.Container>
