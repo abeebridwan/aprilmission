@@ -49,7 +49,7 @@ export default function ModalContainer({ children }) {
             <p>
               <em>
                 Note: We are currently unable to take payment directly online, and we are working to make that possible.
-                Thank you for your patience
+                Thank you for your patience.
               </em>
             </p>
           </div>

@@ -80,11 +80,11 @@ export const Body = styled.div`
   overflow: scroll;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   line-height: 17px;
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 3vw;
-  padding: 2px;
+  padding: 20px 2px 2px 2px;
   color: black;
   font-weight: 700;
   width: 80%;
@@ -94,24 +94,27 @@ export const Body = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 5px;
-  /* width */
+  animation: ${fadeIn} 0.4s;
+  & dt {
+    margin: 6px 0;
+  }
+  & dd {
+    margin: 5px 0 5px 40px;
+  }
   &::-webkit-scrollbar {
     width: 2px;
     height: 2px;
   }
 
-  /* Track */
   &::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
 
-  /* Handle */
   &::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
   }
 
-  /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
@@ -130,21 +133,24 @@ export const Body = styled.div`
   }
   @media (min-width: 415px) {
     & {
-      overflow-x: scroll;
-      overflow-y: hidden;
+      overflow: scroll;
       font-size: 15px;
       padding: 7px;
+      & dd {
+        margin: 5px 0 5px 80px;
+      }
     }
   }
   @media (min-width: 650px) {
     & {
-      overflow-x: scroll;
-      overflow-y: hidden;
+      overflow: scroll;
       width: 60%;
       height: 75%;
       font-size: 20px;
       padding: 20px;
+      & dd {
+        margin: 5px 0 5px 150px;
+      }
     }
   }
-  animation: ${fadeIn} 0.4s;
 `;

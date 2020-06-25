@@ -1,1 +1,1 @@
-[{ "id": 1, "text": "About" }, { "id": 2, "text": "Projects" }, { "id": 3, "text": "Gallery" }, { "id": 4, "text": "Contact" }]
+[{ "id": 1, "text": "About", "href":"#C4" }, { "id": 2, "text": "Projects", "href":"#C4" }, { "id": 3, "text": "Gallery", "href":"#C4" }, { "id": 4, "text": "Contact", "href":"#C4" }]
