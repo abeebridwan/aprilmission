@@ -48,11 +48,7 @@ Header.Text = function HeaderText({ children, ...restProps }) {
 };
 
 Header.Link = function HeaderLink({ children, ...restProps }) {
-  return (
-    <Link {...restProps}>
-      <a href="/#">{children}</a>
-    </Link>
-  );
+  return <Link {...restProps}>{children}</Link>;
 };
 
 Header.Icon = function HeaderIcon({ children, ...restProps }) {

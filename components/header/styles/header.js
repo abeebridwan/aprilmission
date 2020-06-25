@@ -168,16 +168,9 @@ export const Link = styled.li`
   padding: 18px 0px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   width: 25%;
+  color: white;
   &:hover {
     background-color: rgb(248, 127, 75, 0.5);
-  }
-  & a {
-    width: 100%;
-  }
-  & a:link,
-  & a:visited {
-    text-decoration: none;
-    color: white;
   }
 `;
 

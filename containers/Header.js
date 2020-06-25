@@ -64,7 +64,14 @@ export default function HeaderContainer({ children }) {
             />
             <Header.List topList="topList">
               {listData.map((item) => (
-                <Header.Link key={item.id}>{item.text}</Header.Link>
+                <Header.Link
+                  onClick={() => {
+                    window.location.href = item.href;
+                  }}
+                  key={item.id}
+                >
+                  {item.text}
+                </Header.Link>
               ))}
             </Header.List>
           </Header.Group>
@@ -72,7 +79,14 @@ export default function HeaderContainer({ children }) {
         <Header.Container showList={ShowList}>
           <Header.List>
             {listData.map((item) => (
-              <Header.Link key={item.id}>{item.text}</Header.Link>
+              <Header.Link
+                onClick={() => {
+                  window.location.href = item.href;
+                }}
+                key={item.id}
+              >
+                {item.text}
+              </Header.Link>
             ))}
           </Header.List>
         </Header.Container>

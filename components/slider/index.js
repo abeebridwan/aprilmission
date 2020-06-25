@@ -41,7 +41,9 @@ Slider.Text = function SliderText({ title, subTitle1, subTitle2, children, ...re
       >
         Donate Now
       </Slider.Button>
-      <Slider.Button bg="none">Know More</Slider.Button>
+      <a href="#about">
+        <Slider.Button bg="none">Know More</Slider.Button>
+      </a>
       {children}
     </Text>
   );

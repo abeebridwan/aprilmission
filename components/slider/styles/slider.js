@@ -173,6 +173,10 @@ export const Text = styled.div`
       top: 45%;
     }
   }
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 export const Title = styled.h2`

@@ -38,7 +38,7 @@ export default function ModalContainer({ children }) {
               <dt>
                 <strong>Account Bank: </strong>
               </dt>
-              <dd>UBA</dd>
+              <dd>UBA, Nigeria</dd>
             </dl>
 
             <p>
