@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import HeaderContainer from '../containers/Header';
 import SliderContainer from '../containers/Slider';
 import ModalContainer from '../containers/Modal';
+import ServiceContainer from '../containers/Service';
 import { ToggleContext } from '../context/modal';
 
 export default function Index() {
@@ -13,6 +14,7 @@ export default function Index() {
         <SliderContainer />
         <ModalContainer />
       </HeaderContainer>
+      <ServiceContainer />
     </ToggleContext.Provider>
   );
 }
