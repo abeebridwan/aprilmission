@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import Slider from '../components/slider/index';
-import sliderData from '../fixtures/sliderData';
-import dotNumbers from '../fixtures/dotNumber';
+import { dotNumbers, sliderData } from '../fixtures/Data';
 
 export default function SliderContainer() {
   const [slideIndex, setslideIndex] = useState(0);

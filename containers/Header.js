@@ -5,7 +5,7 @@ import { faEnvelope, faPhoneAlt, faBars, faTimes } from '@fortawesome/free-solid
 import React, { useState, useContext } from 'react';
 import Header from '../components/header/index';
 import Slider from '../components/slider/index';
-import listData from '../fixtures/listData';
+import { listData } from '../fixtures/Data';
 import { ToggleContext } from '../context/modal';
 /*
 const propTypes = {

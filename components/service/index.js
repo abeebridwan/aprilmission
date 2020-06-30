@@ -6,4 +6,8 @@ const Service = ({ children, ...RestProps }) => <Container {...RestProps}>{child
 
 Service.Item = ({ children, RestProps }) => <Item {...RestProps}>{children}</Item>;
 
+Service.Icon = ({ children, RestProps }) => <Item {...RestProps}>{children}</Item>;
+
+Service.Content = ({ children, RestProps }) => <Item {...RestProps}>{children}</Item>;
+
 export default Service;
