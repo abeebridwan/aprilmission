@@ -57,7 +57,7 @@ export const Header = styled.div`
   & svg {
     background-color: white;
     padding: 10px 12px;
-    margin-left: 90vw;
+    margin-left: 86vw;
     margin-right: 80px;
     border-radius: 4px;
     cursor: pointer;
@@ -81,10 +81,10 @@ export const Body = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  line-height: 17px;
-  font-size: 13px;
+  line-height: 20px;
+  font-size: 14.5px;
   margin-top: 3vw;
-  padding: 20px 2px 2px 2px;
+  padding: 15px 0px 0px 10px;
   color: black;
   font-weight: 700;
   width: 80%;
@@ -135,7 +135,7 @@ export const Body = styled.div`
     & {
       overflow: scroll;
       font-size: 15px;
-      padding: 7px;
+      padding: 10px;
       & dd {
         margin: 5px 0 5px 80px;
       }
@@ -144,10 +144,10 @@ export const Body = styled.div`
   @media (min-width: 650px) {
     & {
       overflow: scroll;
-      width: 60%;
+      width: 70%;
       height: 75%;
-      font-size: 20px;
-      padding: 20px;
+      font-size: 16.5px;
+      padding: 30px;
       & dd {
         margin: 5px 0 5px 150px;
       }

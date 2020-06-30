@@ -8,7 +8,7 @@ const ServiceContainer = ({ childern }) => (
   <Service>
     <Service.Item>
       {contentData.map((item) => (
-        <div key={item.key}>
+        <div key={item.id}>
           <Service.Icon>{item.icon}</Service.Icon>
           <Service.Content>
             <p>{item.text}</p>

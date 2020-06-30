@@ -124,7 +124,7 @@ export const Dot = styled.div`
       display: none;
     }
   }
-  @media (max-width: 261px) {
+  @media (max-width: 274px) {
     & {
       display: none;
     }
