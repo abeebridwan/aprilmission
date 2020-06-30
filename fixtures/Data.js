@@ -1,3 +1,6 @@
+import { faBriefcaseMedical, faHamburger, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export const sliderData = [
   {
     id: 1,
@@ -56,7 +59,22 @@ export const listData = [
 ];
 
 export const contentData = [
-  { id: 1, text: 'We provide children with', head: 'Best Education' },
-  { id: 2, text: 'We support children with', head: 'Healthy Foods' },
-  { id: 3, text: 'We provide children with', head: 'Medical Facilities' },
+  {
+    id: 1,
+    text: 'We provide children with',
+    head: 'Best Education',
+    icon: <FontAwesomeIcon icon={faUserGraduate} size="2x" />,
+  },
+  {
+    id: 2,
+    text: 'We support children with',
+    head: 'Healthy Foods',
+    icon: <FontAwesomeIcon icon={faHamburger} size="2x" />,
+  },
+  {
+    id: 3,
+    text: 'We provide children with',
+    head: 'Medical Facilities',
+    icon: <FontAwesomeIcon icon={faBriefcaseMedical} size="2x" />,
+  },
 ];
