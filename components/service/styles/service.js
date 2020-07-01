@@ -43,6 +43,9 @@ export const Icon = styled.div`
     color: #c3bfbf;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
+  & svg:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
 `;
 
 export const Content = styled.div`
