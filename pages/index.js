@@ -9,12 +9,26 @@ import { ToggleContext } from '../context/modal';
 
 export default function Index() {
   const [ShowModal, setShowModal] = useState(false);
+  const [aboutModal, setAboutModal] = useState(false);
+  const [headerModal, setHeaderModal] = useState(false);
+  const [sliderModal, setsliderModal] = useState(false);
   return (
-    <ToggleContext.Provider value={{ ShowModal, setShowModal }}>
+    <ToggleContext.Provider
+      value={{
+        ShowModal,
+        setShowModal,
+        aboutModal,
+        setAboutModal,
+        headerModal,
+        sliderModal,
+        setHeaderModal,
+        setsliderModal,
+      }}
+    >
       <HeaderContainer>
         <SliderContainer />
-        <ModalContainer />
       </HeaderContainer>
+      <ModalContainer />
       <ServiceContainer />
       <AboutContainer />
     </ToggleContext.Provider>

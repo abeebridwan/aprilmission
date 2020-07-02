@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-empty */
 import { faBriefcaseMedical, faHamburger, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -78,3 +80,53 @@ export const contentData = [
     icon: <FontAwesomeIcon icon={faBriefcaseMedical} size="2x" />,
   },
 ];
+
+const ModalDatas = {
+  valueOne: (
+    <div>
+      <pre>
+        <em>Together We are making a difference!</em>
+      </pre>
+      <h3>Account Information</h3>
+      <dl>
+        <dt>
+          <strong>Account Name:</strong>
+        </dt>
+        <dd>April Mission Foundation</dd>
+        <dt>
+          <strong>Account Number: </strong>
+        </dt>
+        <dd>1023939955</dd>
+        <dt>
+          <strong>Account Bank: </strong>
+        </dt>
+        <dd>UBA, Nigeria</dd>
+      </dl>
+
+      <p>
+        With deepest gratitude and warmest wishes, We thank you on behalf of all the children that your donation will
+        impact.
+      </p>
+      <br />
+      <p>
+        <em>
+          Note: We are currently unable to take payment directly online, and we are working to make that possible. Thank
+          you for your patience.
+        </em>
+      </p>
+    </div>
+  ),
+  valueTwo: <p>about is working</p>,
+  valueThree: <p>i am testing second button</p>,
+};
+export const ModalData = ({ aboutModal, headerModal, sliderModal }) => {
+  let data;
+  if (headerModal === true) {
+    data = ModalDatas.valueOne;
+  } else if (sliderModal === true) {
+    data = ModalDatas.valueOne;
+  } else if (aboutModal === true) {
+    data = ModalDatas.valueTwo;
+  } else { data = '' }
+  return data;
+};

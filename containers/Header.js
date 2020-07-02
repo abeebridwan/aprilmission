@@ -14,7 +14,7 @@ const propTypes = {
  */
 export default function HeaderContainer({ children }) {
   const [ShowList, setShowList] = useState(false);
-  const { ShowModal, setShowModal } = useContext(ToggleContext);
+  const { ShowModal, setShowModal, headerModal, setHeaderModal } = useContext(ToggleContext);
   return (
     <Header>
       <Header.Frame>
@@ -38,6 +38,7 @@ export default function HeaderContainer({ children }) {
               header="header"
               onClick={() => {
                 setShowModal(!ShowModal);
+                setHeaderModal(!headerModal);
               }}
             >
               Donate Now

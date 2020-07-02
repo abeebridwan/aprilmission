@@ -26,7 +26,7 @@ Slider.Image = function SliderImage({ src, firstSrc, secondSrc, alt, ...restProp
 };
 
 Slider.Text = function SliderText({ title, subTitle1, subTitle2, children, ...restProps }) {
-  const { ShowModal, setShowModal } = useContext(ToggleContext);
+  const { ShowModal, setShowModal, sliderModal, setsliderModal } = useContext(ToggleContext);
   return (
     <Text {...restProps}>
       <Slider.Title>{title}</Slider.Title>
@@ -37,6 +37,7 @@ Slider.Text = function SliderText({ title, subTitle1, subTitle2, children, ...re
       <Slider.Button
         onClick={() => {
           setShowModal(!ShowModal);
+          setsliderModal(!sliderModal);
         }}
       >
         Donate Now
