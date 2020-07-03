@@ -85,7 +85,7 @@ export const Body = styled.div`
   font-size: 14.5px;
   margin-top: 3vw;
   padding: 15px 0px 0px 10px;
-  color: black;
+  color: #1c304a;
   font-weight: 700;
   width: 80%;
   height: 75%;

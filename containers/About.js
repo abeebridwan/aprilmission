@@ -31,7 +31,17 @@ const AboutContainers = ({ children }) => {
           Read More
         </Slider.Button>
       </About.Content>
-      <About.Video>you can get the best out of every minute</About.Video>
+      <About.Video>
+        <iframe
+          width="420"
+          height="345"
+          src="https://www.youtube.com/embed/4dCiLT3At8k"
+          title="Africa Children"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </About.Video>
       {children}
     </About>
   );

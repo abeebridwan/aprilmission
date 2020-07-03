@@ -116,7 +116,40 @@ const ModalDatas = {
       </p>
     </div>
   ),
-  valueTwo: <p>about is working</p>,
+  valueTwo: (
+    <div>
+      <h2>About Us</h2>
+      <p>
+        April Mission Foundation is a non-profit making organization instituted in August 2020. The organization is
+        birthed through our passion for literacy and support to help send back children from vulnerable and
+        underprivileged communities to school.
+      </p>
+      <p>
+        We strive to ensure that every young individual regardless of geographic location has the opportunity to
+        acquire literacy skills to reach their potential, succeed at school and beyond. We provide free access to
+        quality education materials and innovative solutions that target wide-scale illiteracy.
+      </p>
+
+      <h3>VISION</h3>
+      <p>Support and encourage literacy among children from vulnerable and underprivileged communities.</p>
+      <h3>MISSION</h3>
+      <p>
+        To provide and support quality education by enrolling more children in school, providing educational learning materials, and empowering children through technology.
+        Work in partnership with other Non-profit organizations whose interest and vision is support for literacy and children.
+
+      </p>
+      <h3>GOALS AND OBJECTIVES</h3>
+
+      <p>
+        In 5 years,
+        <br />
+        We intend to support and enroll as many as we can into school.
+        To provide a learning resource center where children can have access to educational material,
+        Support 100 children to develop solutions in their communities using different e-learning tools and skills.
+
+      </p>
+    </div>
+  ),
   valueThree: <p>i am testing second button</p>,
 };
 export const ModalData = ({ aboutModal, headerModal, sliderModal }) => {
