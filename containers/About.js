@@ -10,6 +10,7 @@ const AboutContainers = ({ children }) => {
     <About>
       <About.Content>
         <h2 id="about">About Us</h2>
+        <div />
         <p>
           April Mission Foundation is a non-profit making organization instituted in August 2020. The organization is
           birthed through our passion for literacy and support to help send back children from vulnerable and
@@ -33,8 +34,6 @@ const AboutContainers = ({ children }) => {
       </About.Content>
       <About.Video>
         <iframe
-          width="420"
-          height="345"
           src="https://www.youtube.com/embed/4dCiLT3At8k"
           title="Africa Children"
           frameBorder="0"

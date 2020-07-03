@@ -50,7 +50,7 @@ class MyDocument extends Document {
             padding: '0px',
             margin: '0px',
             overflowX: 'hidden',
-            backgroundColor: 'black',
+            backgroundColor: '#101010',
             minHeight: '100%',
             width: '100%',
             boxSizing: 'border-box',

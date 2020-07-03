@@ -6,6 +6,7 @@ export const Container = styled.section`
   overflow: hidden;
   color: #898888;
   background-color: #101010;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
 export const Item = styled.div`
@@ -53,7 +54,7 @@ export const Content = styled.div`
   flex-grow: 1;
   padding-right: 15px;
   & p {
-    font-size: 0.7em;
+    font-size: 0.65em;
     margin-top: 40px;
     margin-bottom: 0px;
   }
