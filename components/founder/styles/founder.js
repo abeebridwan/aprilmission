@@ -28,11 +28,21 @@ export const Frame = styled.div`
   margin: 80px auto 0;
   padding: 30px 5%;
   & ul.alice-carousel__stage {
+    text-align: center;
     display: grid !important;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto auto;
+    overflow: visible;
     @media (min-width: 1300px) {
       justify-content: center;
     }
+  }
+  & span h3,
+  span p {
+    font-size: 16px;
+    color: #898888;
+  }
+  & ul.alice-carousel__dots {
+    margin-top: 30px;
   }
 `;
