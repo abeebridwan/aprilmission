@@ -7,9 +7,9 @@ import { ToggleContext } from '../context/modal';
 const AboutContainers = ({ children }) => {
   const { ShowModal, setShowModal, aboutModal, setAboutModal } = useContext(ToggleContext);
   return (
-    <About>
+    <About id="about">
       <About.Content>
-        <h2 id="about">About Us</h2>
+        <h2>About Us</h2>
         <div />
         <p>
           April Mission Foundation is a non-profit making organization instituted in August 2020. The organization is

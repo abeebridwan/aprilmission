@@ -153,11 +153,11 @@ const ModalDatas = {
   ),
   valueThree: (
     <div>
-      <p>Here is an opportunity to impact the lives of thousands of children</p>
-      <p>Let Make the World a better place for everyone </p>
+      <p>Here is an opportunity to impact the lives of thousands of children.</p>
+      <p>Let's Make the World a better place for everyone.</p>
       <br />
 
-      <p>Join us by sending an email to <span style={{ border: '2px solid #000', padding: '2.5px', userSelect: 'all' }}><em>aprilmission@gmail.com</em></span></p>
+      <p>Join us by sending an email to <span style={{ border: '2px solid #1c304a', padding: '2.5px', userSelect: 'all' }}><em>aprilmission@gmail.com</em></span></p>
       <p>Our correspondent will get back to you shortly with details of the process.</p>
       <br />
       <p>
