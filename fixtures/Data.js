@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-empty */
 import { faBriefcaseMedical, faHamburger, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
@@ -150,9 +151,22 @@ const ModalDatas = {
       </p>
     </div>
   ),
-  valueThree: <p>i am testing second button</p>,
+  valueThree: (
+    <div>
+      <p>Here is an opportunity to impact the lives of thousands of children</p>
+      <p>Let Make the World a better place for everyone </p>
+      <br />
+
+      <p>Join us by sending an email to <span style={{ border: '2px solid #000', padding: '2.5px', userSelect: 'all' }}><em>aprilmission@gmail.com</em></span></p>
+      <p>Our correspondent will get back to you shortly with details of the process.</p>
+      <br />
+      <p>
+        We thank you on behalf of all the children we will impact together.
+      </p>
+    </div>
+  ),
 };
-export const ModalData = ({ aboutModal, headerModal, sliderModal }) => {
+export const ModalData = ({ aboutModal, headerModal, sliderModal, projectModal }) => {
   let data;
   if (headerModal === true) {
     data = ModalDatas.valueOne;
@@ -160,6 +174,8 @@ export const ModalData = ({ aboutModal, headerModal, sliderModal }) => {
     data = ModalDatas.valueOne;
   } else if (aboutModal === true) {
     data = ModalDatas.valueTwo;
+  } else if (projectModal === true) {
+    data = ModalDatas.valueThree;
   } else { data = '' }
   return data;
 };

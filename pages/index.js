@@ -14,6 +14,7 @@ export default function Index() {
   const [aboutModal, setAboutModal] = useState(false);
   const [headerModal, setHeaderModal] = useState(false);
   const [sliderModal, setsliderModal] = useState(false);
+  const [projectModal, setprojectModal] = useState(false);
   return (
     <ToggleContext.Provider
       value={{
@@ -25,6 +26,8 @@ export default function Index() {
         sliderModal,
         setHeaderModal,
         setsliderModal,
+        projectModal,
+        setprojectModal,
       }}
     >
       <HeaderContainer>

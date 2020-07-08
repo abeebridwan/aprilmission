@@ -225,7 +225,7 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 0.9rem;
   margin-right: ${({ header }) => (header ? '0' : '4px')};
-  color: inherit;
+  color: #fff;
   overflow: hidden;
 
   &:hover {

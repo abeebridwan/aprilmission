@@ -17,6 +17,8 @@ export default function ModalContainer({ children }) {
     sliderModal,
     setHeaderModal,
     setsliderModal,
+    projectModal,
+    setprojectModal,
   } = useContext(ToggleContext);
   return (
     <Modal>
@@ -30,11 +32,17 @@ export default function ModalContainer({ children }) {
               setAboutModal(false);
               setHeaderModal(false);
               setsliderModal(false);
+              setprojectModal(false);
             }}
           />
         </Modal.Header>
         <Modal.Body>
-          <ModalData aboutModal={aboutModal} headerModal={headerModal} sliderModal={sliderModal} />
+          <ModalData
+            aboutModal={aboutModal}
+            headerModal={headerModal}
+            sliderModal={sliderModal}
+            projectModal={projectModal}
+          />
         </Modal.Body>
       </Modal.Content>
       {children}
