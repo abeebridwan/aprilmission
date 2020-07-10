@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  background: #202120;
+  background-color: #202120;
 `;
 
 export const Title = styled.div`
