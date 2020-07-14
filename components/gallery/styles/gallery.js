@@ -24,4 +24,32 @@ export const Title = styled.div`
 }
 `;
 
-export const Group = styled.div``;
+export const Group = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  grid-gap: 0.5em;
+  @media (max-width: 380px) {
+    & {
+      display: block;
+    }
+    & div {
+      margin: 15px auto;
+    }
+  }
+  @media (max-width: 550px) {
+    & {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+  }
+`;
+
+export const Item = styled.div`
+  height: 200px;
+  max-width: 285px;
+  background-color: cyan;
+  @media (min-width: 550px) {
+    & {
+      max-width: 310px;
+    }
+  }
+`;

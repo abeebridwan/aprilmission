@@ -1,16 +1,25 @@
 /* eslint-disable react/prop-types */
-import Gallery from '../components/gallery/index';
+import GallerySec from '../components/gallery/index';
 
 const GalleryContainer = ({ children }) => (
-  <Gallery id="gallery">
-    <Gallery.Title>
+  <GallerySec id="gallery">
+    <GallerySec.Title>
       <div>Our Stories</div>
       <h2>Gallery</h2>
       <div />
-    </Gallery.Title>
-    <Gallery.Group>no shaking, almost there!</Gallery.Group>
+    </GallerySec.Title>
+    <GallerySec.Group>
+      <GallerySec.Item />
+      <GallerySec.Item />
+      <GallerySec.Item />
+      <GallerySec.Item />
+      <GallerySec.Item />
+      <GallerySec.Item />
+      <GallerySec.Item />
+      <GallerySec.Item />
+    </GallerySec.Group>
     {children}
-  </Gallery>
+  </GallerySec>
 );
 
 export default GalleryContainer;

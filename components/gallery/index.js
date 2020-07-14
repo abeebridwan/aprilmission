@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
-import { Container, Title, Group } from './styles/gallery';
+import { Container, Title, Group, Item } from './styles/gallery';
 
-const Gallery = ({ children, ...RestProps }) => <Container {...RestProps}>{children}</Container>;
+const GallerySec = ({ children, ...RestProps }) => <Container {...RestProps}>{children}</Container>;
 
-Gallery.Title = ({ children, ...RestProps }) => <Title {...RestProps}>{children}</Title>;
+GallerySec.Title = ({ children, ...RestProps }) => <Title {...RestProps}>{children}</Title>;
 
-Gallery.Group = ({ children, ...RestProps }) => <Group {...RestProps}>{children}</Group>;
+GallerySec.Group = ({ children, ...RestProps }) => <Group {...RestProps}>{children}</Group>;
 
-export default Gallery;
+GallerySec.Item = ({ children, ...RestProps }) => <Item {...RestProps}>{children}</Item>;
+
+export default GallerySec;
