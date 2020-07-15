@@ -60,3 +60,12 @@ export const Item = styled.div`
     }
   }
 `;
+export const Modal = styled.div``;
+
+export const Content = styled.div``;
+
+export const Slider = styled.div``;
+
+export const Image = styled.div``;
+
+export const Link = styled.a``;
