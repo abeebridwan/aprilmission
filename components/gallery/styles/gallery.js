@@ -41,12 +41,19 @@ export const Group = styled.div`
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
   }
+  @media (min-width: 715px) and (max-width: 816px) {
+    & {
+      grid-template-columns: repeat(auto-fill, minmax(235px, 311px));
+      justify-content: center;
+      align-content: center;
+    }
+  }
 `;
 
 export const Item = styled.div`
   height: 200px;
   max-width: 285px;
-  background-color: cyan;
+  background-color: #202120;
   @media (min-width: 550px) {
     & {
       max-width: 310px;

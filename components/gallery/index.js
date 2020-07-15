@@ -7,6 +7,16 @@ GallerySec.Title = ({ children, ...RestProps }) => <Title {...RestProps}>{childr
 
 GallerySec.Group = ({ children, ...RestProps }) => <Group {...RestProps}>{children}</Group>;
 
-GallerySec.Item = ({ children, ...RestProps }) => <Item {...RestProps}>{children}</Item>;
+GallerySec.Item = ({ children, ...RestProps }) => (
+  <Item {...RestProps}>
+    <picture>
+      <source media="(min-width:382px) and (max-width:510px)" srcSet="/medium-01.png" />
+      <source media="(max-width:256px)" srcSet=" /medium-01.png" />
+      <img src="/small-01.png" alt="Flowers" style={{ width: '100%', height: '100%' }} />
+    </picture>
+
+    {children}
+  </Item>
+);
 
 export default GallerySec;
