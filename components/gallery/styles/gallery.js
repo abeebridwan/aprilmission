@@ -5,6 +5,7 @@ export const Container = styled.section`
   padding: 3% 5%;
   box-sizing: border-box;
   display: relative;
+  overflow: auto;
 `;
 
 export const Title = styled.div`
@@ -82,12 +83,61 @@ export const Modal = styled.div`
   left: 0;
   overflow: hidden;
   animation: ${fadeInContainer} 0.6s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  & span {
+    right: -33px;
+    top: -33px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: 1000;
+    padding: 0px 5.5px;
+    background-color: #000;
+    color: white;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.9), 0 6px 20px 5px rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+  }
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  position: relative;
+  border: 15px solid #fff;
+  border-radius: 5px;
+`;
 
 export const Slider = styled.div``;
 
 export const Image = styled.div``;
 
-export const Link = styled.a``;
+export const Link = styled.a`
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  background: none;
+  display: block;
+  transition: all 0.6s ease;
+  z-index: 10;
+  padding: 8px;
+  font-weight: bold;
+  &#next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  &#prev {
+    left: 0px;
+    border-radius: 0 3px 3px 0;
+  }
+  &#prev:hover,
+  &#next:hover {
+    background-color: #202120;
+  }
+`;

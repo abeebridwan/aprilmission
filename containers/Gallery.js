@@ -1,4 +1,6 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable react/prop-types */
+import React from 'react';
 import GallerySec from '../components/gallery/index';
 
 const GalleryContainer = ({ children }) => (
@@ -21,14 +23,14 @@ const GalleryContainer = ({ children }) => (
     {children}
 
     <GallerySec.Modal>
-      <span>&times;</span>
       <GallerySec.ModalContent>
+        <span>&times;</span>
         <GallerySec.ModalSlider>
           <GallerySec.ModalImg />
         </GallerySec.ModalSlider>
+        <GallerySec.ModalLink id="prev">&#10094;</GallerySec.ModalLink>
+        <GallerySec.ModalLink id="next">&#10095;</GallerySec.ModalLink>
       </GallerySec.ModalContent>
-      <GallerySec.ModalLink>&#10094;</GallerySec.ModalLink>
-      <GallerySec.ModalLink>&#10095;</GallerySec.ModalLink>
     </GallerySec.Modal>
   </GallerySec>
 );

@@ -19,12 +19,7 @@ GallerySec.Item = ({ children, ...RestProps }) => (
   </Item>
 );
 
-GallerySec.Modal = ({ children, ...RestProps }) => (
-  <Modal {...RestProps}>
-    big modal
-    {children}
-  </Modal>
-);
+GallerySec.Modal = ({ children, ...RestProps }) => <Modal {...RestProps}>{children}</Modal>;
 
 GallerySec.ModalContent = ({ children, ...RestProps }) => <Content {...RestProps}>{children}</Content>;
 
@@ -35,7 +30,7 @@ GallerySec.ModalImg = ({ src, firstSrc, secondSrc, alt, ...RestProps }) => (
     <picture>
       {/* <source media="(min-width:788px)" srcSet={secondSrc} />
       <source media="(min-width:415px)" srcSet={firstSrc} /> */}
-      <img src="/small-01.png" alt="dere" />
+      <img src="/small-01.png" alt="dere" style={{ display: 'block' }} className="image" />
     </picture>
   </Image>
 );
