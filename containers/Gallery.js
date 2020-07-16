@@ -19,6 +19,17 @@ const GalleryContainer = ({ children }) => (
       <GallerySec.Item />
     </GallerySec.Group>
     {children}
+
+    <GallerySec.Modal>
+      <span>&times;</span>
+      <GallerySec.ModalContent>
+        <GallerySec.ModalSlider>
+          <GallerySec.ModalImg />
+        </GallerySec.ModalSlider>
+      </GallerySec.ModalContent>
+      <GallerySec.ModalLink>&#10094;</GallerySec.ModalLink>
+      <GallerySec.ModalLink>&#10095;</GallerySec.ModalLink>
+    </GallerySec.Modal>
   </GallerySec>
 );
 

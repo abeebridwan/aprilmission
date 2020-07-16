@@ -19,11 +19,16 @@ GallerySec.Item = ({ children, ...RestProps }) => (
   </Item>
 );
 
-GallerySec.Modal = ({ children, ...RestProps }) => <Modal {...RestProps}>big modal</Modal>;
+GallerySec.Modal = ({ children, ...RestProps }) => (
+  <Modal {...RestProps}>
+    big modal
+    {children}
+  </Modal>
+);
 
-GallerySec.ModalContent = ({ children, ...RestProps }) => <Content {...RestProps} />;
+GallerySec.ModalContent = ({ children, ...RestProps }) => <Content {...RestProps}>{children}</Content>;
 
-GallerySec.ModalSlider = ({ children, ...RestProps }) => <Slider {...RestProps} />;
+GallerySec.ModalSlider = ({ children, ...RestProps }) => <Slider {...RestProps}>{children}</Slider>;
 
 GallerySec.ModalImg = ({ src, firstSrc, secondSrc, alt, ...RestProps }) => (
   <Image {...RestProps}>
@@ -35,6 +40,6 @@ GallerySec.ModalImg = ({ src, firstSrc, secondSrc, alt, ...RestProps }) => (
   </Image>
 );
 
-GallerySec.ModalLink = ({ children, ...RestProps }) => <Link {...RestProps} />;
+GallerySec.ModalLink = ({ children, ...RestProps }) => <Link {...RestProps}>{children}</Link>;
 
 export default GallerySec;

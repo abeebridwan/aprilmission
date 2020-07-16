@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
   background-color: #202120;
   padding: 3% 5%;
   box-sizing: border-box;
+  display: relative;
 `;
 
 export const Title = styled.div`
@@ -60,7 +61,28 @@ export const Item = styled.div`
     }
   }
 `;
-export const Modal = styled.div``;
+const fadeInContainer = keyframes`
+  from {
+    opacity: 0;
+
+  }
+  to {  
+    opacity: 1;
+  
+  }
+`;
+export const Modal = styled.div`
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 9900;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  animation: ${fadeInContainer} 0.6s;
+`;
 
 export const Content = styled.div``;
 
