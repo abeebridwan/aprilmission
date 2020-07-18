@@ -10,9 +10,9 @@ GallerySec.Group = ({ children, ...RestProps }) => <Group {...RestProps}>{childr
 GallerySec.Item = ({ children, ...RestProps }) => (
   <Item {...RestProps}>
     <picture>
-      <source media="(min-width:382px) and (max-width:510px)" srcSet="/medium-01.png" />
-      <source media="(max-width:256px)" srcSet=" /medium-01.png" />
-      <img src="/small-01.png" alt="Flowers" style={{ width: '100%', height: '100%' }} />
+      <source media="(min-width:382px) and (max-width:510px)" srcSet="/gallery/medium-01.png" />
+      <source media="(max-width:256px)" srcSet=" /gallery/medium-01.png" />
+      <img src="/gallery/small-01.png" alt="Flowers" style={{ width: '100%', height: '100%' }} />
     </picture>
 
     {children}
@@ -30,7 +30,7 @@ GallerySec.ModalImg = ({ src, firstSrc, secondSrc, alt, ...RestProps }) => (
     <picture>
       {/* <source media="(min-width:788px)" srcSet={secondSrc} />
       <source media="(min-width:415px)" srcSet={firstSrc} /> */}
-      <img src="/small-01.png" alt="dere" style={{ display: 'block' }} className="image" />
+      <img src="/gallery/modal/big-02.jpg" alt="dere" style={{ display: 'block' }} className="image" />
     </picture>
   </Image>
 );

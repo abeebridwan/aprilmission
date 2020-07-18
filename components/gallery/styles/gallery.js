@@ -81,12 +81,17 @@ export const Modal = styled.div`
   z-index: 9900;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow-x: scroll;
   animation: ${fadeInContainer} 0.6s;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 420px) {
+    & {
+      align-items: flex-start;
+    }
+  }
   & span {
     right: -33px;
     top: -33px;
