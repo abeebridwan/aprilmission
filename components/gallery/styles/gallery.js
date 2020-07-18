@@ -111,6 +111,8 @@ export const Content = styled.div`
   position: relative;
   border: 15px solid #fff;
   border-radius: 5px;
+  display: none;
+  margin: auto;
 `;
 
 export const Slider = styled.div``;

@@ -30,7 +30,7 @@ GallerySec.ModalImg = ({ src, firstSrc, secondSrc, alt, ...RestProps }) => (
     <picture>
       {/* <source media="(min-width:788px)" srcSet={secondSrc} />
       <source media="(min-width:415px)" srcSet={firstSrc} /> */}
-      <img src="/gallery/modal/big-02.jpg" alt="dere" style={{ display: 'block' }} className="image" />
+      <img src={src} alt="dere" style={{ display: 'block' }} className="image" />
     </picture>
   </Image>
 );
