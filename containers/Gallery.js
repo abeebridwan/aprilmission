@@ -48,7 +48,7 @@ const GalleryContainer = ({ children }) => {
       {children}
 
       <GallerySec.Modal>
-        <GallerySec.ModalContent className="ModalSlides">
+        <GallerySec.ModalContent className="ModalSlides fade">
           <span>&times;</span>
           <GallerySec.ModalSlider>
             <GallerySec.ModalImg src="/gallery/modal/big-01.png" />
@@ -71,7 +71,7 @@ const GalleryContainer = ({ children }) => {
           </GallerySec.ModalLink>
         </GallerySec.ModalContent>
 
-        <GallerySec.ModalContent className="ModalSlides">
+        <GallerySec.ModalContent className="ModalSlides fade">
           <span>&times;</span>
           <GallerySec.ModalSlider>
             <GallerySec.ModalImg src="/gallery/modal/big-02.jpg" />
@@ -94,7 +94,7 @@ const GalleryContainer = ({ children }) => {
           </GallerySec.ModalLink>
         </GallerySec.ModalContent>
 
-        <GallerySec.ModalContent className="ModalSlides">
+        <GallerySec.ModalContent className="ModalSlides fade">
           <span>&times;</span>
           <GallerySec.ModalSlider>
             <GallerySec.ModalImg src="/gallery/modal/big-01.png" />

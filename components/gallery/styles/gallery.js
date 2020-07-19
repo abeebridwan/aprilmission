@@ -107,12 +107,24 @@ export const Modal = styled.div`
   }
 `;
 
+const fade = keyframes`
+  from {
+    opacity: 0.3;
+  }
+  to {  
+    opacity: 1;
+  }
+`;
+
 export const Content = styled.div`
   position: relative;
   border: 15px solid #fff;
   border-radius: 5px;
   display: none;
   margin: auto;
+  &.fade {
+    animation: ${fade} 3s;
+  }
 `;
 
 export const Slider = styled.div``;
