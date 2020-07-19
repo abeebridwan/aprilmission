@@ -28,8 +28,8 @@ GallerySec.ModalSlider = ({ children, ...RestProps }) => <Slider {...RestProps}>
 GallerySec.ModalImg = ({ src, firstSrc, secondSrc, alt, ...RestProps }) => (
   <Image {...RestProps}>
     <picture>
-      {/* <source media="(min-width:788px)" srcSet={secondSrc} />
-      <source media="(min-width:415px)" srcSet={firstSrc} /> */}
+      <source media="(min-width:1070px)" srcSet={secondSrc} />
+      <source media="(min-width:650px)" srcSet={firstSrc} />
       <img src={src} alt="dere" style={{ display: 'block' }} className="image" />
     </picture>
   </Image>

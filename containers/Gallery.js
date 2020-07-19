@@ -74,7 +74,11 @@ const GalleryContainer = ({ children }) => {
         <GallerySec.ModalContent className="ModalSlides fade">
           <span>&times;</span>
           <GallerySec.ModalSlider>
-            <GallerySec.ModalImg src="/gallery/modal/big-02.jpg" />
+            <GallerySec.ModalImg
+              src="/gallery/modal/big-02.jpg"
+              firstSrc="/gallery/modal/big-03.jpg"
+              secondSrc="/gallery/modal/bigO.jpg"
+            />
           </GallerySec.ModalSlider>
           <GallerySec.ModalLink
             onClick={() => {
