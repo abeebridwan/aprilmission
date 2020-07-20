@@ -83,13 +83,18 @@ export const Modal = styled.div`
   left: 0;
   overflow-x: scroll;
   animation: ${fadeInContainer} 0.6s;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   @media (max-width: 420px) {
     & {
       align-items: flex-start;
+    }
+  }
+  @media (min-width: 1100px) {
+    & {
+      overflow: hidden;
     }
   }
   & span {
@@ -104,6 +109,26 @@ export const Modal = styled.div`
     border: 2px solid #fff;
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.9), 0 6px 20px 5px rgba(0, 0, 0, 0.9);
     border-radius: 50%;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  &::-webkit-scrollbar-corner {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
 `;
 

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-plusplus */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
@@ -7,9 +9,26 @@ import { modalImgData } from '../fixtures/Data';
 const GalleryContainer = ({ children }) => {
   const [slideIndex, setslideIndex] = useState(0);
 
+  const openModal = () => {
+    document.getElementById('myModal').style.display = 'flex';
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    const { body } = document;
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}`;
+  };
+
+  const closeModal = () => {
+    document.getElementById('myModal').style.display = 'none';
+    const { body } = document;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  };
+
   const showSlides = (Index) => {
     let slideIndex = Index;
-    let i;
+
     const slides = document.getElementsByClassName('ModalSlides');
     if (slideIndex >= slides.length) {
       slideIndex = 0;
@@ -19,7 +38,7 @@ const GalleryContainer = ({ children }) => {
       slideIndex = slides.length - 1;
       setslideIndex(slides.length - 1);
     }
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }
     slides[slideIndex].style.display = 'block';
@@ -27,6 +46,9 @@ const GalleryContainer = ({ children }) => {
 
   useEffect(() => {
     showSlides(slideIndex);
+    window.addEventListener('scroll', () => {
+      document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+    });
   });
 
   return (
@@ -37,21 +59,67 @@ const GalleryContainer = ({ children }) => {
         <div />
       </GallerySec.Title>
       <GallerySec.Group>
-        <GallerySec.Item />
-        <GallerySec.Item />
-        <GallerySec.Item />
-        <GallerySec.Item />
-        <GallerySec.Item />
-        <GallerySec.Item />
-        <GallerySec.Item />
-        <GallerySec.Item />
+        <GallerySec.Item
+          onClick={() => {
+            openModal();
+            setslideIndex(0);
+          }}
+        />
+        <GallerySec.Item
+          onClick={() => {
+            openModal();
+            setslideIndex(1);
+          }}
+        />
+        <GallerySec.Item
+          onClick={() => {
+            openModal();
+            setslideIndex(2);
+          }}
+        />
+        <GallerySec.Item
+          onClick={() => {
+            openModal();
+            setslideIndex(3);
+          }}
+        />
+        <GallerySec.Item
+          onClick={() => {
+            openModal();
+            setslideIndex(4);
+          }}
+        />
+        <GallerySec.Item
+          onClick={() => {
+            openModal();
+            setslideIndex(5);
+          }}
+        />
+        <GallerySec.Item
+          onClick={() => {
+            openModal();
+            setslideIndex(6);
+          }}
+        />
+        <GallerySec.Item
+          onClick={() => {
+            openModal();
+            setslideIndex(7);
+          }}
+        />
       </GallerySec.Group>
       {children}
 
-      <GallerySec.Modal>
+      <GallerySec.Modal id="myModal">
         {modalImgData.map((item) => (
-          <GallerySec.ModalContent className="ModalSlides fade">
-            <span>&times;</span>
+          <GallerySec.ModalContent className="ModalSlides fade" key={item.id}>
+            <span
+              onClick={() => {
+                closeModal();
+              }}
+            >
+              &times;
+            </span>
             <GallerySec.ModalSlider>
               <GallerySec.ModalImg src={item.src} firstSrc={item.firstSrc} secondSrc={item.secondSrc} alt={item.alt} />
             </GallerySec.ModalSlider>
