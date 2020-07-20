@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import GallerySec from '../components/gallery/index';
+import { modalImgData } from '../fixtures/Data';
 
 const GalleryContainer = ({ children }) => {
   const [slideIndex, setslideIndex] = useState(0);
@@ -48,78 +49,30 @@ const GalleryContainer = ({ children }) => {
       {children}
 
       <GallerySec.Modal>
-        <GallerySec.ModalContent className="ModalSlides fade">
-          <span>&times;</span>
-          <GallerySec.ModalSlider>
-            <GallerySec.ModalImg src="/gallery/modal/big-01.png" />
-          </GallerySec.ModalSlider>
-          <GallerySec.ModalLink
-            onClick={() => {
-              setslideIndex(slideIndex + 1);
-            }}
-            id="prev"
-          >
-            &#10094;
-          </GallerySec.ModalLink>
-          <GallerySec.ModalLink
-            onClick={() => {
-              setslideIndex(slideIndex + 1);
-            }}
-            id="next"
-          >
-            &#10095;
-          </GallerySec.ModalLink>
-        </GallerySec.ModalContent>
-
-        <GallerySec.ModalContent className="ModalSlides fade">
-          <span>&times;</span>
-          <GallerySec.ModalSlider>
-            <GallerySec.ModalImg
-              src="/gallery/modal/big-02.jpg"
-              firstSrc="/gallery/modal/big-03.jpg"
-              secondSrc="/gallery/modal/bigO.jpg"
-            />
-          </GallerySec.ModalSlider>
-          <GallerySec.ModalLink
-            onClick={() => {
-              setslideIndex(slideIndex + 1);
-            }}
-            id="prev"
-          >
-            &#10094;
-          </GallerySec.ModalLink>
-          <GallerySec.ModalLink
-            onClick={() => {
-              setslideIndex(slideIndex + 1);
-            }}
-            id="next"
-          >
-            &#10095;
-          </GallerySec.ModalLink>
-        </GallerySec.ModalContent>
-
-        <GallerySec.ModalContent className="ModalSlides fade">
-          <span>&times;</span>
-          <GallerySec.ModalSlider>
-            <GallerySec.ModalImg src="/gallery/modal/big-01.png" />
-          </GallerySec.ModalSlider>
-          <GallerySec.ModalLink
-            onClick={() => {
-              setslideIndex(slideIndex + 1);
-            }}
-            id="prev"
-          >
-            &#10094;
-          </GallerySec.ModalLink>
-          <GallerySec.ModalLink
-            onClick={() => {
-              setslideIndex(slideIndex + 1);
-            }}
-            id="next"
-          >
-            &#10095;
-          </GallerySec.ModalLink>
-        </GallerySec.ModalContent>
+        {modalImgData.map((item) => (
+          <GallerySec.ModalContent className="ModalSlides fade">
+            <span>&times;</span>
+            <GallerySec.ModalSlider>
+              <GallerySec.ModalImg src={item.src} firstSrc={item.firstSrc} secondSrc={item.secondSrc} alt={item.alt} />
+            </GallerySec.ModalSlider>
+            <GallerySec.ModalLink
+              onClick={() => {
+                setslideIndex(slideIndex + 1);
+              }}
+              id="prev"
+            >
+              &#10094;
+            </GallerySec.ModalLink>
+            <GallerySec.ModalLink
+              onClick={() => {
+                setslideIndex(slideIndex + 1);
+              }}
+              id="next"
+            >
+              &#10095;
+            </GallerySec.ModalLink>
+          </GallerySec.ModalContent>
+        ))}
       </GallerySec.Modal>
     </GallerySec>
   );

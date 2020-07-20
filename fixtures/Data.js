@@ -179,3 +179,53 @@ export const ModalData = ({ aboutModal, headerModal, sliderModal, projectModal }
   } else { data = '' }
   return data;
 };
+
+
+export const modalImgData = [
+  {
+    id: 1,
+    src: '/gallery/modal/1-small.jpg',
+    alt: 'a lady smilling with children in the school yard',
+  },
+  {
+    id: 2,
+    src: '/gallery/modal/2-small.jpg',
+    firstSrc: '/gallery/modal/2-medium.jpg',
+    secondSrc: '/gallery/modal/2-big.jpg',
+    alt: 'children in the school yard waving at the camera',
+  },
+  {
+    id: 3,
+    src: '/gallery/modal/3-small.jpg',
+    firstSrc: '/gallery/modal/3-medium.jpg',
+    secondSrc: '/gallery/modal/3-big.jpg',
+    alt: 'children in the school yard posing for the camera',
+  },
+  {
+    id: 4,
+    src: '/gallery/modal/4-small.png',
+    alt: 'a lady in black accompanying a child she rendered help to',
+  },
+  {
+    id: 5,
+    src: '/gallery/modal/5-small.png',
+    alt: 'a lady in black waiting for a child to come out of the of a house',
+  },
+  {
+    id: 6,
+    src: '/gallery/modal/6-small.png',
+    alt: 'two adults caring for a child-girl',
+  },
+  {
+    id: 7,
+    src: '/gallery/modal/7-small.jpg',
+    firstSrc: '/gallery/modal/7-medium.jpg',
+    secondSrc: '/gallery/modal/7-big.jpg',
+    alt: 'children in the school yard waiting for AprilMission Group',
+  },
+  {
+    id: 8,
+    src: '/gallery/modal/8-small.png',
+    alt: 'AprilMission Chairman with a child he rendered help to',
+  },
+];
