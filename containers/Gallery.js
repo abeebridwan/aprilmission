@@ -110,9 +110,20 @@ const GalleryContainer = ({ children }) => {
       </GallerySec.Group>
       {children}
 
-      <GallerySec.Modal id="myModal">
+      <GallerySec.Modal
+        id="myModal"
+        onClick={() => {
+          closeModal();
+        }}
+      >
         {modalImgData.map((item) => (
-          <GallerySec.ModalContent className="ModalSlides fade" key={item.id}>
+          <GallerySec.ModalContent
+            className="ModalSlides fade"
+            key={item.id}
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
             <span
               onClick={() => {
                 closeModal();
