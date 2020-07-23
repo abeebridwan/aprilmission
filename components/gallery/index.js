@@ -7,12 +7,12 @@ GallerySec.Title = ({ children, ...RestProps }) => <Title {...RestProps}>{childr
 
 GallerySec.Group = ({ children, ...RestProps }) => <Group {...RestProps}>{children}</Group>;
 
-GallerySec.Item = ({ children, ...RestProps }) => (
+GallerySec.Item = ({ src, firstSrc, alt, children, ...RestProps }) => (
   <Item {...RestProps}>
     <picture>
-      <source media="(min-width:382px) and (max-width:510px)" srcSet="/gallery/medium-01.png" />
-      <source media="(max-width:256px)" srcSet=" /gallery/medium-01.png" />
-      <img src="/gallery/small-01.png" alt="Flowers" style={{ width: '100%', height: '100%' }} />
+      <source media="(min-width:382px) and (max-width:510px)" srcSet={firstSrc} />
+      <source media="(max-width:256px)" srcSet={firstSrc} />
+      <img src={src} alt={alt} style={{ width: '100%', height: '100%' }} />
     </picture>
 
     {children}

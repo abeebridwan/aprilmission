@@ -229,3 +229,62 @@ export const modalImgData = [
     alt: 'AprilMission Chairman with a child he rendered help to',
   },
 ];
+
+export const modalGalleryData = [
+  {
+    id: 1,
+    src: '/gallery/small_01.jpg',
+    firstSrc: '/gallery/medium_01.jpg',
+    alt: 'a lady smilling with children in the school yard',
+    index: 0,
+  },
+  {
+    id: 2,
+    src: '/gallery/small_02.png',
+    firstSrc: '/gallery/medium_02.png',
+    alt: 'children in the school yard waving at the camera',
+    index: 1,
+  },
+  {
+    id: 3,
+    src: '/gallery/small_03.png',
+    firstSrc: '/gallery/medium_03.png',
+    alt: 'children in the school yard posing for the camera',
+    index: 2,
+  },
+  {
+    id: 4,
+    src: '/gallery/small_04.png',
+    firstSrc: '/gallery/medium_04.png',
+    alt: 'a lady in black accompanying a child she rendered help to',
+    index: 3,
+  },
+  {
+    id: 5,
+    src: '/gallery/small_05.png',
+    firstSrc: '/gallery/medium_05.png',
+    alt: 'a lady in black waiting for a child to come out of the of a house',
+    index: 4,
+  },
+  {
+    id: 6,
+    src: '/gallery/small_06.png',
+    firstSrc: '/gallery/medium_06.png',
+    alt: 'two adults caring for a child-girl',
+    index: 5,
+  },
+  {
+    id: 7,
+    src: '/gallery/small_07.png',
+    firstSrc: '/gallery/medium_07.png',
+    alt: 'children in the school yard waiting for AprilMission Group',
+    index: 6,
+  },
+  {
+    id: 8,
+    src: '/gallery/small_08.png',
+    firstSrc: '/gallery/medium_08.png',
+    alt: 'AprilMission Chairman with a child he rendered help to',
+    index: 7,
+  },
+];

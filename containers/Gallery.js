@@ -4,7 +4,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import GallerySec from '../components/gallery/index';
-import { modalImgData } from '../fixtures/Data';
+import { modalImgData, modalGalleryData } from '../fixtures/Data';
 
 const GalleryContainer = ({ children }) => {
   const [slideIndex, setslideIndex] = useState(0);
@@ -59,54 +59,17 @@ const GalleryContainer = ({ children }) => {
         <div />
       </GallerySec.Title>
       <GallerySec.Group>
-        <GallerySec.Item
-          onClick={() => {
-            openModal();
-            setslideIndex(0);
-          }}
-        />
-        <GallerySec.Item
-          onClick={() => {
-            openModal();
-            setslideIndex(1);
-          }}
-        />
-        <GallerySec.Item
-          onClick={() => {
-            openModal();
-            setslideIndex(2);
-          }}
-        />
-        <GallerySec.Item
-          onClick={() => {
-            openModal();
-            setslideIndex(3);
-          }}
-        />
-        <GallerySec.Item
-          onClick={() => {
-            openModal();
-            setslideIndex(4);
-          }}
-        />
-        <GallerySec.Item
-          onClick={() => {
-            openModal();
-            setslideIndex(5);
-          }}
-        />
-        <GallerySec.Item
-          onClick={() => {
-            openModal();
-            setslideIndex(6);
-          }}
-        />
-        <GallerySec.Item
-          onClick={() => {
-            openModal();
-            setslideIndex(7);
-          }}
-        />
+        {modalGalleryData.map((item) => (
+          <GallerySec.Item
+            onClick={() => {
+              openModal();
+              setslideIndex(item.index);
+            }}
+            src={item.src}
+            firstSrc={item.firstSrc}
+            alt={item.alt}
+          />
+        ))}
       </GallerySec.Group>
       {children}
 

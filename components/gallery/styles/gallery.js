@@ -72,6 +72,16 @@ const fadeInContainer = keyframes`
   
   }
 `;
+const bigger = keyframes`
+  from {
+    transform: scale(1,1);
+
+  }
+  to {  
+    transform: scale(1.5,1.5);
+  
+  }
+`;
 export const Modal = styled.div`
   position: fixed;
   background-color: rgb(0, 0, 0);
@@ -109,6 +119,9 @@ export const Modal = styled.div`
     border: 2px solid #fff;
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.9), 0 6px 20px 5px rgba(0, 0, 0, 0.9);
     border-radius: 50%;
+  }
+  & span:hover {
+    animation: ${bigger} 0.5s forwards;
   }
   &::-webkit-scrollbar {
     width: 5px;
