@@ -65,6 +65,7 @@ const GalleryContainer = ({ children }) => {
               openModal();
               setslideIndex(item.index);
             }}
+            key={item.id}
             src={item.src}
             firstSrc={item.firstSrc}
             alt={item.alt}
