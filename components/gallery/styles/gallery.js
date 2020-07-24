@@ -86,8 +86,8 @@ export const Modal = styled.div`
   position: fixed;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.95);
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 9900;
   top: 0;
   left: 0;
