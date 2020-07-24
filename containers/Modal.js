@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/prop-types */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { ToggleContext } from '../context/modal';
@@ -20,8 +20,24 @@ export default function ModalContainer({ children }) {
     projectModal,
     setprojectModal,
   } = useContext(ToggleContext);
+
+  useEffect(() => {
+    if (ShowModal || aboutModal || headerModal || sliderModal || projectModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  });
   return (
-    <Modal>
+    <Modal
+      onClick={() => {
+        setShowModal(!ShowModal);
+        setAboutModal(false);
+        setHeaderModal(false);
+        setsliderModal(false);
+        setprojectModal(false);
+      }}
+    >
       <Modal.Content>
         <Modal.Header>
           <FontAwesomeIcon
@@ -36,7 +52,11 @@ export default function ModalContainer({ children }) {
             }}
           />
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           <ModalData
             aboutModal={aboutModal}
             headerModal={headerModal}
