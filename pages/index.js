@@ -8,6 +8,7 @@ import AboutContainer from '../containers/About';
 import FounderContainer from '../containers/Founder';
 import ProjectContainer from '../containers/Project';
 import GalleryContainer from '../containers/Gallery';
+import ContactContainer from '../containers/Contact';
 import { ToggleContext } from '../context/modal';
 
 export default function Index() {
@@ -40,6 +41,7 @@ export default function Index() {
       <FounderContainer />
       <ProjectContainer />
       <GalleryContainer />
+      <ContactContainer />
     </ToggleContext.Provider>
   );
 }
