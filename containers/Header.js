@@ -29,7 +29,7 @@ export default function HeaderContainer({ children }) {
             <Header.SmallGroup>
               <Header.Text>
                 <FontAwesomeIcon icon={faEnvelope} transform="shrink-2 left-2" />
-                aprilmission@gmail.com
+                aprilmssn@gmail.com
               </Header.Text>
             </Header.SmallGroup>
           </Header.Group>

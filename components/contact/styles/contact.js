@@ -27,16 +27,27 @@ export const Group = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (min-width: 800px) {
+    & {
+      flex-direction: row;
+    }
+  }
 `;
 
 export const SmallGroup = styled.div`
   border: 3px solid white;
   height: 500px;
   margin-top: 5px;
-  /* &:first-of-type {
-    margin-right: 2px;
+  width: 100%;
+  &:first-of-type svg {
+    margin-right: 20px;
   }
-  &:last-of-type {
-    margin-left: 2px;
-  } */
+  @media (min-width: 800px) {
+    &:first-of-type {
+      margin-right: 4px;
+    }
+    &:last-of-type {
+      margin-left: 4px;
+    }
+  }
 `;
