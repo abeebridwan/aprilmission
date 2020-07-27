@@ -49,15 +49,15 @@ const ContactContainer = ({ children }) => {
             aprilmssn@gmail.com
           </div>
           <h2>Follow Us</h2>
-          <span>
+          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faFacebook} size="lg" />
-          </span>
-          <span>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faTwitter} size="lg" />
-          </span>
-          <span>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="lg" />
-          </span>
+          </a>
         </Contact.SmallGroup>
         <Contact.SmallGroup>
           <h2>Message</h2>
