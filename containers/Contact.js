@@ -34,21 +34,33 @@ const ContactContainer = ({ children }) => {
           <p>Get in touch with us. Visit, call or fill the form and we would be in touch.</p>
           <div>
             <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" />
-            No. 9b-club road, jos, plateau state, Nigeria
+            <span>
+              <h3>Our Location</h3>
+              <p>No. 9b-club road, Jos, Plateau state, Nigeria</p>
+            </span>
           </div>
           <div>
             <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
-            +2347065654046
+            <span>
+              <h3>Phone</h3>
+              +2347065654046
+            </span>
           </div>
           <div>
             <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
-            +2347039366568
+            <span>
+              <h3>Phone</h3>
+              +2347039366568
+            </span>
           </div>
           <div>
             <FontAwesomeIcon icon={faEnvelope} size="lg" />
-            aprilmssn@gmail.com
+            <span>
+              <h3>Email</h3>
+              aprilmssn@gmail.com
+            </span>
           </div>
-          <h2>Follow Us</h2>
+          <h3>Follow Us</h3>
           <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faFacebook} size="lg" />
           </a>
@@ -60,7 +72,7 @@ const ContactContainer = ({ children }) => {
           </a>
         </Contact.SmallGroup>
         <Contact.SmallGroup>
-          <h2>Message</h2>
+          <h2>Contact Form</h2>
 
           <form action="https://formsubmit.co/aprilmssn@gmail.com" method="POST">
             <input

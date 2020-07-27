@@ -26,7 +26,7 @@ export const Group = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   @media (min-width: 800px) {
     & {
       flex-direction: row;
@@ -35,12 +35,50 @@ export const Group = styled.div`
 `;
 
 export const SmallGroup = styled.div`
-  border: 3px solid white;
-  height: 500px;
+  padding-bottom: 55px;
   margin-top: 5px;
   width: 100%;
+  line-height: 1.6em;
+  font-weight: 400;
+  text-align: left;
+  font-size: 16px;
+  color: #898888;
+  & h3 {
+    margin-top: 30px;
+    color: #c3bfbf;
+    margin-bottom: 0;
+  }
+  & div {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    & h3,
+    p {
+      margin: 0;
+    }
+    & h3 {
+      color: #c3bfbf;
+    }
+  }
+  & h2 {
+    margin-top: 0;
+    color: #c3bfbf;
+    font-size: 25px;
+  }
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
   &:first-of-type svg {
     margin-right: 20px;
+    color: #f67d4a;
+    background-color: #202120;
+    padding: 10px;
+    min-width: 40px;
+    border-radius: 5px;
+    &:last-child {
+      margin-top: 10px;
+    }
   }
   @media (min-width: 800px) {
     &:first-of-type {
