@@ -35,7 +35,6 @@ export const Group = styled.div`
 `;
 
 export const SmallGroup = styled.div`
-  padding-bottom: 30px;
   margin-top: 5px;
   width: 100%;
   line-height: 1.6em;
@@ -43,9 +42,6 @@ export const SmallGroup = styled.div`
   text-align: left;
   font-size: 16px;
   color: #898888;
-  &:first-of-type {
-    padding-bottom: 80px;
-  }
   & h3 {
     margin-top: 30px;
     color: #c3bfbf;
@@ -87,9 +83,13 @@ export const SmallGroup = styled.div`
       }
     }
   }
+  &:first-of-type {
+    padding-bottom: 80px;
+  }
   @media (min-width: 800px) {
     &:first-of-type {
       margin-right: 20px;
+      padding-bottom: 0px;
     }
     &:last-of-type {
       margin-left: 20px;
