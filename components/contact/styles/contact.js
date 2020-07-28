@@ -35,7 +35,7 @@ export const Group = styled.div`
 `;
 
 export const SmallGroup = styled.div`
-  padding-bottom: 55px;
+  padding-bottom: 30px;
   margin-top: 5px;
   width: 100%;
   line-height: 1.6em;
@@ -43,6 +43,9 @@ export const SmallGroup = styled.div`
   text-align: left;
   font-size: 16px;
   color: #898888;
+  &:first-of-type {
+    padding-bottom: 80px;
+  }
   & h3 {
     margin-top: 30px;
     color: #c3bfbf;
@@ -78,14 +81,53 @@ export const SmallGroup = styled.div`
     border-radius: 5px;
     &:last-child {
       margin-top: 10px;
+      &:hover {
+        background-color: transparent;
+        border: 2px solid #c3bfbf;
+      }
     }
   }
   @media (min-width: 800px) {
     &:first-of-type {
-      margin-right: 4px;
+      margin-right: 20px;
     }
     &:last-of-type {
-      margin-left: 4px;
+      margin-left: 20px;
     }
+  }
+  & form {
+    width: 100%;
+  }
+  & input,
+  textarea {
+    box-sizing: border-box;
+    background: #202120;
+    width: 100%;
+    height: 45px;
+    border: 1px solid transparent;
+    color: #898888;
+    border-radius: 0;
+    padding: 6px 18px;
+    margin: 15px 0;
+    box-shadow: none;
+    &:hover,
+    :focus,
+    :target,
+    :focus-visible {
+      box-shadow: none;
+      border-color: #f67d4a;
+      outline: none;
+    }
+  }
+  & textarea {
+    height: 90px;
+  }
+  & [type='submit'] {
+    width: 150px;
+    border-radius: 5px;
+    background-color: #f67d4a;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
   }
 `;

@@ -34,6 +34,7 @@ class MyDocument extends Document {
         style={{
           height: '100%',
           color: '#545454',
+          boxSizing: 'border-box',
         }}
       >
         <Head>

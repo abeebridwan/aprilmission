@@ -19,8 +19,6 @@ const ContactContainer = ({ children }) => {
   Sincerly,
   April Mission Team`;
 
-  console.log({ name });
-  console.log(response);
   return (
     <Contact id="contact">
       <Contact.Title>
