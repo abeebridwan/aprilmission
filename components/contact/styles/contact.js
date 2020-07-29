@@ -77,9 +77,10 @@ export const SmallGroup = styled.div`
     border-radius: 5px;
     &:last-child {
       margin-top: 10px;
+      border: 2px solid #202120;
       &:hover {
         background-color: transparent;
-        border: 2px solid #c3bfbf;
+        border-color: #c3bfbf;
       }
     }
   }
