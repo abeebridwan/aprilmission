@@ -4,7 +4,10 @@ import Footer from '../components/footer';
 const FooterContainer = ({ children }) => (
   <>
     <Footer>
-      I will be the greatest Human being ever live(d)
+      © 2021 April Mission | powered by
+      <a href="https://github.com/olumide025" rel="noreferrer">
+        @Olumide
+      </a>
       {children}
     </Footer>
   </>
