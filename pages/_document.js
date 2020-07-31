@@ -56,6 +56,7 @@ class MyDocument extends Document {
             width: '100%',
             boxSizing: 'border-box',
             fontFamily: 'Arial',
+            position: 'relative',
           }}
         >
           <Main />

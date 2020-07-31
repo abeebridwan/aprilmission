@@ -10,6 +10,8 @@ import ProjectContainer from '../containers/Project';
 import GalleryContainer from '../containers/Gallery';
 import ContactContainer from '../containers/Contact';
 import FooterContainer from '../containers/Footer';
+import ArrowUpContainer from '../containers/Arrowup';
+
 import { ToggleContext } from '../context/modal';
 
 export default function Index() {
@@ -44,6 +46,7 @@ export default function Index() {
       <GalleryContainer />
       <ContactContainer />
       <FooterContainer />
+      <ArrowUpContainer />
     </ToggleContext.Provider>
   );
 }
