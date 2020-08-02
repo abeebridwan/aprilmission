@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -9,13 +9,20 @@ export const Container = styled.button`
   bottom: 20px;
   right: 30px;
   z-index: 999999;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 13px;
   border: none;
   outline: none;
   background-color: #f67d4a;
-  color: #c3bfbf;
+  color: #fff;
   cursor: pointer;
   padding: 14px 18px;
-  border-radius: 60%;
+  border-radius: 50%;
+  @media (max-width: 600px) {
+    font-size: 10px;
+    padding: 11px 15px;
+  }
+  &:hover {
+    background-color: rgb(248, 127, 75, 0.5);
+  }
 `;
