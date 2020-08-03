@@ -144,6 +144,7 @@ export const Body = styled.div`
   @media (min-width: 650px) {
     & {
       overflow: scroll;
+      margin-top: 0;
       width: 70%;
       height: 75%;
       font-size: 16.5px;

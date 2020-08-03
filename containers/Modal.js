@@ -19,6 +19,8 @@ export default function ModalContainer({ children }) {
     setsliderModal,
     projectModal,
     setprojectModal,
+    projecttwoModal,
+    setprojecttwoModal,
   } = useContext(ToggleContext);
 
   useEffect(() => {
@@ -36,6 +38,7 @@ export default function ModalContainer({ children }) {
         setHeaderModal(false);
         setsliderModal(false);
         setprojectModal(false);
+        setprojecttwoModal(false);
       }}
     >
       <Modal.Content>
@@ -49,6 +52,7 @@ export default function ModalContainer({ children }) {
               setHeaderModal(false);
               setsliderModal(false);
               setprojectModal(false);
+              setprojecttwoModal(false);
             }}
           />
         </Modal.Header>
@@ -62,6 +66,7 @@ export default function ModalContainer({ children }) {
             headerModal={headerModal}
             sliderModal={sliderModal}
             projectModal={projectModal}
+            projecttwoModal={projecttwoModal}
           />
         </Modal.Body>
       </Modal.Content>

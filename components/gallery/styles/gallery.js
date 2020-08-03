@@ -63,7 +63,6 @@ export const Item = styled.div`
       max-width: 310px;
     }
   }
-
   &:after {
     content: '';
     position: absolute;
@@ -79,6 +78,7 @@ export const Item = styled.div`
     transition: all 0.3s;
   }
   &:hover {
+    cursor: pointer;
     &:before {
       font-family: 'Open Sans', sans-serif;
       content: '+';
@@ -154,6 +154,7 @@ export const Modal = styled.div`
     border: 2px solid #fff;
     box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.9), 0 6px 20px 5px rgba(0, 0, 0, 0.9);
     border-radius: 50%;
+    cursor: pointer;
   }
   & span:hover {
     animation: ${bigger} 0.5s forwards;

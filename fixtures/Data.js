@@ -165,8 +165,24 @@ const ModalDatas = {
       </p>
     </div>
   ),
+  valueFour: (
+    <div>
+      <h2>
+        NewsLetter/Events:
+      </h2>
+      <p>
+        We had our first successful enrolment for the session 2020/2021 with two students ANN CLEMENT and HABIBU LAWAN enrolled in schools on full-time scholarship.
+      </p>
+      <p>
+        For more information, please see our contact section below
+      </p>
+      <p>
+        Thank you.
+      </p>
+    </div>
+  ),
 };
-export const ModalData = ({ aboutModal, headerModal, sliderModal, projectModal }) => {
+export const ModalData = ({ aboutModal, headerModal, sliderModal, projectModal, projecttwoModal }) => {
   let data;
   if (headerModal === true) {
     data = ModalDatas.valueOne;
@@ -176,6 +192,8 @@ export const ModalData = ({ aboutModal, headerModal, sliderModal, projectModal }
     data = ModalDatas.valueTwo;
   } else if (projectModal === true) {
     data = ModalDatas.valueThree;
+  } else if (projecttwoModal === true) {
+    data = ModalDatas.valueFour;
   } else { data = '' }
   return data;
 };

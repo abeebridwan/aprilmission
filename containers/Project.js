@@ -5,7 +5,8 @@ import Slider from '../components/slider/index';
 import { ToggleContext } from '../context/modal';
 
 const ProjectContainer = ({ children }) => {
-  const { ShowModal, setShowModal, projectModal, setprojectModal } = useContext(ToggleContext);
+  const { ShowModal, setShowModal, projectModal, setprojectModal, projecttwoModal, setprojecttwoModal } =
+    useContext(ToggleContext);
   return (
     <Project id="projects">
       <Project.Title>
@@ -34,6 +35,15 @@ const ProjectContainer = ({ children }) => {
               children from underprivileged homes; send them back to school; in 2021, two more children were supported
               and returned to school.
             </p>
+            <Slider.Button
+              header="header"
+              onClick={() => {
+                setShowModal(!ShowModal);
+                setprojecttwoModal(!projecttwoModal);
+              }}
+            >
+              Read More
+            </Slider.Button>
           </span>
         </Project.Item>
         <Project.Item>
