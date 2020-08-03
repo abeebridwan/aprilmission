@@ -1,15 +1,22 @@
 /* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltUp } from '@fortawesome/free-solid-svg-icons';
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import ArrowUp from '../components/arrowup/index';
+import { ToggleContext } from '../context/modal';
 
 const ArrowUpContainer = ({ children }) => {
+  const { ShowModal } = useContext(ToggleContext);
+
   const scrollFunction = () => {
     const mybutton = document.getElementById('myBtn');
+
     if (document.body.scrollTop > 760 || document.documentElement.scrollTop > 760) {
       mybutton.style.display = 'flex';
     } else {
+      mybutton.style.display = 'none';
+    }
+    if (ShowModal) {
       mybutton.style.display = 'none';
     }
   };
@@ -18,6 +25,10 @@ const ArrowUpContainer = ({ children }) => {
     document.documentElement.scrollTop = 0;
   };
   useEffect(() => {
+    const mybutton = document.getElementById('myBtn');
+    if (ShowModal) {
+      mybutton.style.display = 'none';
+    }
     window.onscroll = function () {
       scrollFunction();
     };
