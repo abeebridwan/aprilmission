@@ -21,7 +21,6 @@ const ArrowUpContainer = ({ children }) => {
     window.onscroll = function () {
       scrollFunction();
     };
-    topFunction();
   });
   return (
     <ArrowUp

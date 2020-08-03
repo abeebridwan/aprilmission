@@ -4,7 +4,7 @@ export const Container = styled.section`
   background-color: #202120;
   padding: 3% 5% 6% 5%;
   box-sizing: border-box;
-  display: relative;
+  position: relative;
   overflow: auto;
 `;
 

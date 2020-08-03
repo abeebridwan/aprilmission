@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   margin-top: -10px;
-  padding: 10px 0 5px;
+  padding: 10px 5% 5px;
   overflow: hidden;
   color: #898888;
   background-color: #101010;
@@ -10,21 +10,16 @@ export const Container = styled.section`
 `;
 
 export const Item = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.5em;
   & > div {
     display: flex;
-    flex-direction: row;
-    margin: 2px 10px;
     overflow: hidden;
     padding: 10px 0 10px;
-    flex-grow: 1;
   }
-  @media (min-width: 635px) {
-    & {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+  @media (max-width: 340px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 `;
 

@@ -26,7 +26,7 @@ export const Frame = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 80px auto 0;
-  padding: 30px 5%;
+  padding: 3% 5%;
   & ul.alice-carousel__stage {
     display: grid !important;
     grid-template-columns: auto auto auto auto;

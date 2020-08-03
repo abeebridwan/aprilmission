@@ -6,18 +6,15 @@ export const Container = styled.section`
   align-items: center;
   flex-direction: column;
   background-color: #101010;
-  padding: 20px;
+  padding: 3% 5% 6% 5%;
   font-size: 15px;
   color: #898888;
-  @media (min-width: 600px) {
-    padding: 55px;
-  }
+
   @media (min-width: 800px) {
     padding: 0px;
-    justify-content: center;
-    margin: 0 auto;
+    justify-content: space-between;
+    margin: 0 5%;
     flex-direction: row;
-    width: 90%;
   }
 `;
 

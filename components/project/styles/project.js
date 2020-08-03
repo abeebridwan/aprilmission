@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   background-color: #101010;
-  padding: 3% 5%;
+  padding: 3% 5% 6% 5%;
   box-sizing: border-box;
 `;
 
@@ -41,9 +41,17 @@ export const Item = styled.div`
   position: relative;
   padding: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 0.5em;
+  margin: 0.5em 0;
+  flex-grow: 1;
   @media (min-width: 950px) {
     width: calc(100% / 3.5);
+    margin: 0.5em;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
   &::before,
   &::after {
