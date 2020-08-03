@@ -53,7 +53,9 @@ export const Group = styled.div`
 `;
 
 export const Item = styled.div`
+  box-sizing: border-box;
   height: 200px;
+  position: relative;
   max-width: 285px;
   background-color: #202120;
   @media (min-width: 550px) {
@@ -61,7 +63,40 @@ export const Item = styled.div`
       max-width: 310px;
     }
   }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 3%;
+    left: 4%;
+    width: 92%;
+    height: 94%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 90;
+    opacity: 0;
+    visibility: visible;
+    transform: scale(0);
+    transition: all 0.3s;
+  }
+  &:hover {
+    &:before {
+      font-family: 'Open Sans', sans-serif;
+      content: '+';
+      position: absolute;
+      top: 35%;
+      left: 42%;
+      font-size: 60px;
+
+      color: #f67d4a;
+      z-index: 200;
+    }
+    &:after {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 `;
+
 const fadeInContainer = keyframes`
   from {
     opacity: 0;
