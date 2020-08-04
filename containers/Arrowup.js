@@ -10,6 +10,10 @@ const ArrowUpContainer = ({ children }) => {
 
   const scrollFunction = () => {
     const mybutton = document.getElementById('myBtn');
+    const { body } = document;
+    const b = body.getBoundingClientRect();
+    const anchorBottom = b.bottom;
+    const hideNow = Math.ceil(anchorBottom) - 100;
 
     if (document.body.scrollTop > 760 || document.documentElement.scrollTop > 760) {
       mybutton.style.display = 'flex';
@@ -17,6 +21,9 @@ const ArrowUpContainer = ({ children }) => {
       mybutton.style.display = 'none';
     }
     if (ShowModal) {
+      mybutton.style.display = 'none';
+    }
+    if (hideNow <= window.innerHeight) {
       mybutton.style.display = 'none';
     }
   };
@@ -29,6 +36,7 @@ const ArrowUpContainer = ({ children }) => {
     if (ShowModal) {
       mybutton.style.display = 'none';
     }
+
     window.onscroll = function () {
       scrollFunction();
     };

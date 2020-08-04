@@ -42,4 +42,7 @@ export const Frame = styled.div`
     color: #898888;
     text-align: center;
   }
+  @media (max-width: 800px) {
+    margin: 0 auto;
+  }
 `;
