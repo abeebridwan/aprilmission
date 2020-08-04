@@ -151,10 +151,11 @@ export const Text = styled.div`
   color: #f2f2f2;
   font-size: 15px;
   position: absolute;
+  z-index: 500;
   top: 42%;
   width: 85%;
   text-align: left;
-  animation: ${moveOne} 5s forwards;
+  animation: ${moveOne} 3s forwards;
   @media (min-width: 414px) {
     & {
       font-size: 16px;
@@ -169,7 +170,7 @@ export const Text = styled.div`
   }
   @media (min-width: 800px) {
     & {
-      animation: ${movetwo} 5s forwards;
+      animation: ${movetwo} 3s forwards;
       top: 45%;
     }
   }
@@ -220,7 +221,7 @@ export const Button = styled.button`
   padding: ${({ header }) => (header ? '0px 6px' : '8px 12px 9px')};
   border-radius: 5px;
   display: inline-block;
-  border: ${({ bg }) => (bg ? '1px solid #fff' : '0')};
+  border: ${({ bg }) => (bg ? '1px solid #fff' : '1px solid #f67d4a')};
   height: ${({ header }) => (header ? '32px' : '35px')};
   cursor: pointer;
   font-size: 0.9rem;
@@ -229,7 +230,7 @@ export const Button = styled.button`
   overflow: hidden;
 
   &:hover {
-    background-color: rgb(248, 127, 75);
+    background-color: ${({ bg }) => (bg ? 'rgb(248, 127, 75)' : 'rgb(248, 127, 75, 0.5)')};
     cursor: pointer;
   }
   @media (min-width: 414px) {

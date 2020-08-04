@@ -82,6 +82,10 @@ export const Group = styled.div`
           display: none;
         }
       }
+      &:hover {
+        background-color: rgb(248, 127, 75, 0.5);
+      }
+      cursor: pointer;
     }
   }
 `;
@@ -153,6 +157,7 @@ export const List = styled.ul`
   padding: 0;
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
   @media (min-width: 800px) {
     & {
       height: 100%;
