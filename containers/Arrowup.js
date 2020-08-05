@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltUp } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useContext } from 'react';
+import throttle from 'lodash/throttle';
 import ArrowUp from '../components/arrowup/index';
 import { ToggleContext } from '../context/modal';
 
@@ -37,9 +38,9 @@ const ArrowUpContainer = ({ children }) => {
       mybutton.style.display = 'none';
     }
 
-    window.onscroll = function () {
+    window.onscroll = throttle(() => {
       scrollFunction();
-    };
+    }, 500);
   });
   return (
     <ArrowUp

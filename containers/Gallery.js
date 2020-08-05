@@ -3,6 +3,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
+import throttle from 'lodash/throttle';
 import GallerySec from '../components/gallery/index';
 import { modalImgData, modalGalleryData } from '../fixtures/Data';
 
@@ -46,9 +47,16 @@ const GalleryContainer = ({ children }) => {
 
   useEffect(() => {
     showSlides(slideIndex);
-    window.addEventListener('scroll', () => {
+    window.addEventListener(
+      'scroll',
+      throttle(() => {
+        document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+      }, 600)
+    );
+
+    /* window.addEventListener('scroll', () => {
       document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-    });
+    }); */
   });
 
   return (
