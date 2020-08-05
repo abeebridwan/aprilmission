@@ -42,7 +42,7 @@ export const Image = styled.picture`
   & img {
     max-width: 100%;
     height: 500px;
-    width: 1900px;
+    width: 2000px;
     filter: grayscale(90%);
     filter: brightness(40%);
 
@@ -130,20 +130,13 @@ export const Dot = styled.div`
     }
   }
 `;
-const moveOne = keyframes`
+
+const move = keyframes`
   from {
     left: -70%;
   }
   to {  
-    left: 10%;
-  }
-`;
-const movetwo = keyframes`
-  from {
-    left: -70%;
-  }
-  to {  
-    left: 15.35%;
+    left: 5%;
   }
 `;
 
@@ -152,26 +145,19 @@ export const Text = styled.div`
   font-size: 15px;
   position: absolute;
   z-index: 500;
-  top: 42%;
+  top: 40%;
   width: 85%;
   text-align: left;
-  animation: ${moveOne} 3s forwards;
+  animation: ${move} 3s forwards;
   @media (min-width: 414px) {
     & {
-      font-size: 16px;
+      font-size: 19px;
       width: 75%;
     }
   }
   @media (min-width: 660px) {
     & {
-      font-size: 16px;
-      width: 55%;
-    }
-  }
-  @media (min-width: 800px) {
-    & {
-      animation: ${movetwo} 3s forwards;
-      top: 45%;
+      font-size: 24px;
     }
   }
   & a {

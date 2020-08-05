@@ -32,20 +32,18 @@ export const Group = styled.div`
     flex-direction: column;
     align-content: center;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    width: 60%;
+    width: 62%;
     font-family: 'Open Sans sans-serif';
     @media (min-width: 660px) {
       & {
-        width: 54.5%;
         flex-direction: row;
         border-right: none;
       }
     }
     @media (min-width: 800px) {
       & {
-        width: 55%;
         position: relative;
-        left: 15%;
+        left: 5%;
         justify-content: flex-start;
       }
     }
@@ -63,7 +61,7 @@ export const Group = styled.div`
       & {
         width: 30%;
         position: relative;
-        left: 15%;
+        left: 5%;
       }
     }
   }
@@ -144,6 +142,7 @@ export const Text = styled.p`
   font-size: 12.5px;
   @media (min-width: 414px) {
     & {
+      font-size: 15.5px;
       font-weight: 505;
     }
   }

@@ -14,7 +14,7 @@ export const Title = styled.div`
       color:#898888;
     }
     & div:last-of-type{
-      margin: 0px auto 30px;
+      margin: 0px auto 10px;
       height:3px;
       width: 80px;
       background: #f67d4a;
@@ -27,20 +27,28 @@ export const Frame = styled.div`
   flex-direction: column;
   margin: 80px auto 0;
   padding: 3% 5%;
-  & ul.alice-carousel__stage {
+  & .alice-carousel__stage {
     display: grid !important;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
-
+    grid-template-columns: auto auto auto auto !important;
+    grid-template-rows: auto !important;
     @media (min-width: 1300px) {
       justify-content: center;
     }
   }
+  & .alice-carousel__dots {
+    margin-top: 10px;
+  }
+  & .alice-carousel__next-btn,
+  .alice-carousel__prev-btn {
+    padding: 5px;
+  }
+
   & span h3,
   span p {
     font-size: 16px;
     color: #898888;
     text-align: center;
+    margin: 0;
   }
   @media (max-width: 800px) {
     margin: 0 auto;

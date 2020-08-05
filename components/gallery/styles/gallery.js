@@ -126,22 +126,16 @@ export const Modal = styled.div`
   z-index: 9900;
   top: 0;
   left: 0;
-  overflow-x: scroll;
+  overflow: scroll;
   animation: ${fadeInContainer} 0.6s;
-  display: none;
+  display: none;  
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  @media (max-width: 420px) {
-    & {
-      align-items: flex-start;
-    }
+  @media (max-height: 500px) {
+    height: 100%;
   }
-  @media (min-width: 1100px) {
-    & {
-      overflow: hidden;
-    }
   }
+
   & span {
     right: -33px;
     top: -33px;
@@ -195,7 +189,9 @@ export const Content = styled.div`
   border: 15px solid #fff;
   border-radius: 5px;
   display: none;
-  margin: auto;
+  @media (max-height: 500px) {
+    margin-top: 199px !important;
+  }
   &.fade {
     animation: ${fade} 3s;
   }

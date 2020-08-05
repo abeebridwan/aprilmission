@@ -40,7 +40,7 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="google" content="notranslate" />
-          <meta name="theme-color" content="#888e94" />
+          <meta name="theme-color" content="#202120" />
           <meta name="description" content="April Mission Foundation website" />
           <meta name="keywords" content="NGO, Children, Donate, Mission Foundation, Charity, Support" />
           <meta name="author" content="Abeeb Ridwan Olumide" />
@@ -49,11 +49,12 @@ class MyDocument extends Document {
         <body
           style={{
             padding: '0px',
-            margin: '0px',
+            margin: '0px auto',
             overflowX: 'hidden',
             backgroundColor: '#101010',
             minHeight: '100%',
             width: '100%',
+            maxWidth: '2000px',
             boxSizing: 'border-box',
             fontFamily: 'Arial',
             position: 'relative',

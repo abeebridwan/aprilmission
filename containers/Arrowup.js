@@ -27,6 +27,9 @@ const ArrowUpContainer = ({ children }) => {
     if (hideNow <= window.innerHeight) {
       mybutton.style.display = 'none';
     }
+    if (window.innerWidth > 2000) {
+      mybutton.style.display = 'none';
+    }
   };
   const topFunction = () => {
     document.body.scrollTop = 0;
