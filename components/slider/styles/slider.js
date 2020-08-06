@@ -70,10 +70,9 @@ export const Link = styled.a`
       color: white;
       font-weight: bold;
       font-size: 30px;
-      transition: 0.6s ease;
       user-select: none;
       display: block;
-      transition: all 0.5s;
+      transition: all ease 0.5s;
       text-align: center;
       line-height: 1.4;
       background-color: rgb(248, 127, 75, 0.5);
@@ -132,11 +131,11 @@ export const Dot = styled.div`
 `;
 
 const move = keyframes`
-  from {
-    left: -70%;
+  from {   
+    transform: perspective(500px) translateZ(1000px);
   }
   to {  
-    left: 5%;
+    transform: translateZ(750px);
   }
 `;
 
@@ -147,6 +146,7 @@ export const Text = styled.div`
   z-index: 500;
   top: 40%;
   width: 85%;
+  left: 5%;
   text-align: left;
   animation: ${move} 3s forwards;
   @media (min-width: 414px) {
