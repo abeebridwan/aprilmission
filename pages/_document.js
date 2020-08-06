@@ -60,6 +60,7 @@ class MyDocument extends Document {
             position: 'relative',
           }}
         >
+          <script>0</script>
           <Main />
           <NextScript />
         </body>
