@@ -126,13 +126,14 @@ export const Modal = styled.div`
   z-index: 9900;
   top: 0;
   left: 0;
-  overflow: scroll;
+  overflow-x: scroll;
   animation: ${fadeInContainer} 0.6s;
   display: none;  
   justify-content: center;
   align-items: center;
   @media (max-height: 500px) {
     height: 100%;
+    overflow: scroll;
   }
   }
 
