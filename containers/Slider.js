@@ -40,7 +40,7 @@ export default function SliderContainer() {
   });
 
   return (
-    <div {...handlers} style={{ position: 'relative', minHeight: '450px' }}>
+    <div {...handlers} style={{ position: 'relative', minHeight: '500px' }}>
       <Slider>
         {sliderData.map((item) => (
           <Slider.Slide className="mySlides fade" key={item.id}>

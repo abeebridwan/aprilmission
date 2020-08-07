@@ -41,7 +41,7 @@ export const Number = styled.div`
 export const Image = styled.picture`
   & img {
     max-width: 100%;
-    height: 450px;
+    height: 500px;
     width: 2000px;
     filter: grayscale(90%);
     filter: brightness(40%);
@@ -208,6 +208,7 @@ export const Button = styled.button`
   border-radius: 5px;
   display: inline-block;
   border: ${({ bg }) => (bg ? '1px solid #fff' : '1px solid #f67d4a')};
+  border-bottom: ${({ bg }) => (bg ? '1px solid #fff' : '1px solid #f67d4a')};
   height: ${({ header }) => (header ? '32px' : '35px')};
   cursor: pointer;
   font-size: 0.9rem;
