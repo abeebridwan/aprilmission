@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MainHeader = styled.header`
   position: relative;
-  min-height: 400px;
+  min-height: 450px;
 `;
 
 export const Frame = styled.div`
