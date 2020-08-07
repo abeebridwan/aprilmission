@@ -41,7 +41,7 @@ export const Number = styled.div`
 export const Image = styled.picture`
   & img {
     max-width: 100%;
-    height: 500px;
+    height: 400px;
     width: 2000px;
     filter: grayscale(90%);
     filter: brightness(40%);
@@ -214,6 +214,8 @@ export const Button = styled.button`
   margin-right: ${({ header }) => (header ? '0' : '4px')};
   color: #fff;
   overflow: hidden;
+  position: relative;
+  z-index: 600;
 
   &:hover {
     background-color: ${({ bg }) => (bg ? 'rgb(248, 127, 75)' : 'rgb(248, 127, 75, 0.5)')};

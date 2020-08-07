@@ -31,7 +31,7 @@ const fadeInContainer = keyframes`
 export const Container = styled.div`
   display: ${({ showModal }) => (showModal === true ? 'block' : 'none')};
   position: fixed;
-  z-index: 500;
+  z-index: 9999999;
   left: 0;
   top: 0;
   width: 100vw;

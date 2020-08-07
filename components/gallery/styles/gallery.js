@@ -126,34 +126,12 @@ export const Modal = styled.div`
   z-index: 9900;
   top: 0;
   left: 0;
-  overflow-x: scroll;
+  overflow: scroll;
   animation: ${fadeInContainer} 0.6s;
-  display: none;  
-  justify-content: center;
-  align-items: center;
-  @media (max-height: 500px) {
-    height: 100%;
-    overflow: scroll;
-  }
+  display: none;    
   }
 
-  & span {
-    right: -33px;
-    top: -33px;
-    position: absolute;
-    font-size: 20px;
-    font-weight: 1000;
-    padding: 0px 5.5px;
-    background-color: #000;
-    color: white;
-    border: 2px solid #fff;
-    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.9), 0 6px 20px 5px rgba(0, 0, 0, 0.9);
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  & span:hover {
-    animation: ${bigger} 0.5s forwards;
-  }
+  
   &::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -189,12 +167,32 @@ export const Content = styled.div`
   position: relative;
   border: 15px solid #fff;
   border-radius: 5px;
+  margin: auto;
   display: none;
-  @media (max-height: 500px) {
-    margin-top: 199px !important;
+  @media (orientation: landscape) and (max-height: 460px) {
+    & {
+      margin-top: 35px;
+    }
   }
   &.fade {
     animation: ${fade} 3s;
+  }
+  & span {
+    right: -33px;
+    top: -33px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: 1000;
+    padding: 0px 5.5px;
+    background-color: #000;
+    color: white;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.9), 0 6px 20px 5px rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  & span:hover {
+    animation: ${bigger} 0.5s forwards;
   }
 `;
 
