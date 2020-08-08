@@ -205,10 +205,9 @@ export const Button = styled.button`
   margin-top: ${({ header }) => (header ? '0' : '15px')};
   font-weight: 650;
   padding: ${({ header }) => (header ? '0px 6px' : '8px 12px 9px')};
-  border-radius: 5px;
   display: inline-block;
-  border: ${({ bg }) => (bg ? '1px solid #fff' : '1px solid #f67d4a')};
-  border-bottom: ${({ bg }) => (bg ? '1px solid #fff' : '1px solid #f67d4a')};
+  border: ${({ bg }) => (bg ? '1px solid #fff !important' : '1px solid #f67d4a')};
+  border-radius: 5px;
   height: ${({ header }) => (header ? '32px' : '35px')};
   cursor: pointer;
   font-size: 0.9rem;
