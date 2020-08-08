@@ -35,6 +35,7 @@ class MyDocument extends Document {
           height: '100%',
           color: '#545454',
           boxSizing: 'border-box',
+          scrollBehavior: 'smooth',
         }}
       >
         <Head>
