@@ -207,6 +207,8 @@ export const Button = styled.button`
   padding: ${({ header }) => (header ? '0px 6px' : '8px 12px 9px')};
   display: inline-block;
   border: ${({ bg }) => (bg ? '1px solid #fff !important' : '1px solid #f67d4a')};
+  border-bottom: ${({ bg }) => (bg ? '2px solid #fff !important' : '1px solid #f67d4a')};
+
   border-radius: 5px;
   height: ${({ header }) => (header ? '32px' : '35px')};
   cursor: pointer;
