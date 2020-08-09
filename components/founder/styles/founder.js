@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   background-color: #202120;
+  width: 100%;
 `;
 
 export const Title = styled.div`
@@ -25,32 +26,6 @@ export const Frame = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 80px auto 0;
+  margin: 80px 0 0;
   padding: 3% 5%;
-  & .alice-carousel__stage {
-    display: grid !important;
-    grid-template-columns: auto auto auto auto !important;
-    grid-template-rows: auto !important;
-    @media (min-width: 1300px) {
-      justify-content: center;
-    }
-  }
-  & .alice-carousel__dots {
-    margin-top: 10px;
-  }
-  & .alice-carousel__next-btn,
-  .alice-carousel__prev-btn {
-    padding: 5px;
-  }
-
-  & span h3,
-  span p {
-    font-size: 16px;
-    color: #898888;
-    text-align: center;
-    margin: 0;
-  }
-  @media (max-width: 800px) {
-    margin: 0 auto;
-  }
 `;

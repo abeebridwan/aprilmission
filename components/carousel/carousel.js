@@ -11,7 +11,6 @@ const Carousel = () => {
     const next = document.querySelector('.Fnext');
     const track = document.querySelector('.track');
     const carouselWidth = document.querySelector('.carousel-container').offsetWidth;
-    console.log({ prev, next, carouselWidth });
     prev.style.display = 'block';
     track.style.transform = `translateX(-${index * carouselWidth}px)`;
 
@@ -26,7 +25,6 @@ const Carousel = () => {
     const next = document.querySelector('.Fnext');
     const track = document.querySelector('.track');
     const carouselWidth = document.querySelector('.carousel-container').offsetWidth;
-    console.log({ prev, next, track, carouselWidth });
     next.style.display = 'block';
     if (index === 0) {
       prev.style.display = 'none';
@@ -40,26 +38,46 @@ const Carousel = () => {
         <div className="track">
           <div className="card-container">
             <div className="card">
-              <div className="img">1</div>
-              <div className="info">Title 1</div>
+              <div className="img">
+                <img src="/001.png" alt="Chairman" />
+              </div>
+              <div className="info">
+                <p>Emmanuel Ocheme</p>
+                <h3>Chairman</h3>
+              </div>
             </div>
           </div>
           <div className="card-container">
             <div className="card">
-              <div className="img">2</div>
-              <div className="info">Title 2</div>
+              <div className="img">
+                <img src="/002.png" alt="Member" />
+              </div>
+              <div className="info">
+                <p>Bridget Idoko</p>
+                <h3>Member</h3>
+              </div>
             </div>
           </div>
           <div className="card-container">
             <div className="card">
-              <div className="img">3</div>
-              <div className="info">Title 3</div>
+              <div className="img">
+                <img src="/003.png" alt="Member" />
+              </div>
+              <div className="info">
+                <p>Azumi Ahmed</p>
+                <h3>Member</h3>
+              </div>
             </div>
           </div>
           <div className="card-container">
             <div className="card">
-              <div className="img">4</div>
-              <div className="info">Title 4</div>
+              <div className="img">
+                <img src="/004.png" alt="Partner" />
+              </div>
+              <div className="info">
+                <p>FOI Initiative</p>
+                <h3>Partner</h3>
+              </div>
             </div>
           </div>
         </div>
