@@ -46,6 +46,8 @@ class MyDocument extends Document {
           <meta name="keywords" content="NGO, Children, Donate, Mission Foundation, Charity, Support" />
           <meta name="author" content="Abeeb Ridwan Olumide" />
           <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400:latin" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         </Head>
         <body
           style={{
