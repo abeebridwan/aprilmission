@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import Founder from '../components/founder/index';
-/* import Gallery from '../components/carousel/index'; */
 import Carousel from '../components/carousel/carousel';
 
 const FounderContainer = ({ children }) => (
@@ -12,7 +11,6 @@ const FounderContainer = ({ children }) => (
           <h2>Founders and Members</h2>
           <div />
         </Founder.Title>
-        {/* <Gallery /> */}
         <Carousel />
       </Founder.Frame>
       {children}

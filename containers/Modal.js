@@ -3,6 +3,7 @@
 import React, { useContext, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import { ToggleContext } from '../context/modal';
 import Modal from '../components/modal/index';
 import { ModalData } from '../fixtures/Data';
@@ -24,11 +25,14 @@ export default function ModalContainer({ children }) {
   } = useContext(ToggleContext);
 
   useEffect(() => {
+    const { body } = document;
     if (ShowModal || aboutModal || headerModal || sliderModal || projectModal) {
-      document.body.style.overflow = 'hidden';
+      disableBodyScroll(body);
     } else {
-      document.body.style.overflow = 'auto';
+      enableBodyScroll(body);
     }
+
+    return () => clearAllBodyScrollLocks();
   });
   return (
     <Modal

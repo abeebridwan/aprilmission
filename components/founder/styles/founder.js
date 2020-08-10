@@ -26,6 +26,11 @@ export const Frame = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 80px 0 0;
-  padding: 3% 5%;
+  margin: 0;
+  padding: 3% 5% 6% 5%;
+  @media (min-width: 800px) {
+    & {
+      margin: 80px 0 0;
+    }
+  }
 `;

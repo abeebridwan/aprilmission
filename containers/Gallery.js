@@ -3,7 +3,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
-import throttle from 'lodash/throttle';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import GallerySec from '../components/gallery/index';
 import { modalImgData, modalGalleryData } from '../fixtures/Data';
 
@@ -12,19 +12,14 @@ const GalleryContainer = ({ children }) => {
 
   const openModal = () => {
     document.getElementById('myModal').style.display = 'flex';
-    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     const { body } = document;
-    body.style.position = 'fixed';
-    body.style.top = `-${scrollY}`;
+    disableBodyScroll(body);
   };
 
   const closeModal = () => {
     document.getElementById('myModal').style.display = 'none';
     const { body } = document;
-    const scrollY = body.style.top;
-    body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    enableBodyScroll(body);
   };
 
   const showSlides = (Index) => {
@@ -47,16 +42,7 @@ const GalleryContainer = ({ children }) => {
 
   useEffect(() => {
     showSlides(slideIndex);
-    window.addEventListener(
-      'scroll',
-      throttle(() => {
-        document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-      }, 600)
-    );
-
-    /* window.addEventListener('scroll', () => {
-      document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-    }); */
+    return () => clearAllBodyScrollLocks();
   });
 
   return (

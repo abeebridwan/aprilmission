@@ -130,6 +130,7 @@ export const SmallGroup = styled.div`
     color: #fff;
     font-weight: 800;
     cursor: pointer;
+    margin-bottom: 0;
     &:hover {
       background-color: rgb(248, 127, 75, 0.5);
     }
