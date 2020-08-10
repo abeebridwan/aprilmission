@@ -3,6 +3,16 @@ import styled from 'styled-components';
 export const MainHeader = styled.header`
   position: relative;
   min-height: 500px;
+  @media (min-width: 415px) {
+    & {
+      min-height: 550px;
+    }
+  }
+  @media (min-width: 415px) {
+    & {
+      min-height: 650px;
+    }
+  }
 `;
 
 export const Frame = styled.div`
