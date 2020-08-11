@@ -33,9 +33,15 @@ const AboutContainers = ({ children }) => {
         </Slider.Button>
       </About.Content>
       <About.Video>
-        <iframe
-          src="https://www.youtube.com/embed/4dCiLT3At8k"
-          title="Africa Children"
+        <lite-youtube
+          videoid="4dCiLT3At8k"
+          videotitle="Africa Children"
+          params="controls=0"
+          autoload
+          style={{
+            backgroundImage: "url('https://i.ytimg.com/vi/4dCiLT3At8k/hqdefault.jpg')",
+            borderRadius: '6px',
+          }}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

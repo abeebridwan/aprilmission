@@ -28,9 +28,4 @@ export const Frame = styled.div`
   flex-direction: column;
   margin: 0;
   padding: 3% 5% 6% 5%;
-  @media (min-width: 800px) {
-    & {
-      margin: 80px 0 0;
-    }
-  }
 `;
