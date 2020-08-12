@@ -54,7 +54,7 @@ export const Group = styled.div`
 
 export const Item = styled.div`
   box-sizing: border-box;
-  height: 200px;
+  height: auto;
   position: relative;
   max-width: 285px;
   background-color: #202120;
@@ -198,7 +198,7 @@ export const Content = styled.div`
 
 export const Slider = styled.div``;
 
-export const Image = styled.div``;
+export const Pics = styled.div``;
 
 export const Link = styled.a`
   cursor: pointer;

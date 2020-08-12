@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 export const MainHeader = styled.header`
   position: relative;
-  min-height: 500.001px;
+  min-height: 500px;
   @media (min-width: 415px) {
     & {
-      min-height: 550.001px;
+      min-height: 550px;
     }
   }
   @media (min-width: 415px) {
     & {
-      min-height: 650.001px;
+      min-height: 650px;
     }
   }
 `;
