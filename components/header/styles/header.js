@@ -8,7 +8,7 @@ export const MainHeader = styled.header`
       min-height: 550px;
     }
   }
-  @media (min-width: 415px) {
+  @media (min-width: 788px) {
     & {
       min-height: 650px;
     }
