@@ -48,12 +48,6 @@ class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400:latin"
-            media="print"
-            onLoad="this.media='all'"
-          />
-          <link
-            rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             media="print"
             onLoad="this.media='all'"
