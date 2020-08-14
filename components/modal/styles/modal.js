@@ -90,7 +90,7 @@ export const Body = styled.div`
   width: 80%;
   height: 75%;
   background-color: white;
-  background-image: url('/maize.jpeg');
+  background-image: url('/maize.webp');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 5px;

@@ -112,7 +112,7 @@ const Carousel = () => {
             <div className="card-container">
               <div className="card">
                 <div className="img">
-                  <img src="/001.png" alt="Chairman" />
+                  <img src="/001.webp" alt="Chairman" />
                 </div>
                 <div className="info">
                   <p>Emmanuel Ocheme</p>
@@ -123,7 +123,7 @@ const Carousel = () => {
             <div className="card-container">
               <div className="card">
                 <div className="img">
-                  <img src="/002.png" alt="Member" />
+                  <img src="/002.webp" alt="Member" />
                 </div>
                 <div className="info">
                   <p>Bridget Idoko</p>
@@ -134,7 +134,7 @@ const Carousel = () => {
             <div className="card-container">
               <div className="card">
                 <div className="img">
-                  <img src="/003.png" alt="Member" />
+                  <img src="/003.webp" alt="Member" />
                 </div>
                 <div className="info">
                   <p>Azumi Ahmed</p>
@@ -145,7 +145,7 @@ const Carousel = () => {
             <div className="card-container">
               <div className="card">
                 <div className="img">
-                  <img src="/004.png" alt="Partner" />
+                  <img src="/004.webp" alt="Partner" />
                 </div>
                 <div className="info">
                   <p>FOI Initiative</p>
