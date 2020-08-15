@@ -7,11 +7,7 @@ import Header from '../components/header/index';
 import Slider from '../components/slider/index';
 import { listData } from '../fixtures/Data';
 import { ToggleContext } from '../context/modal';
-/*
-const propTypes = {
-  children: PropTypes.elementType.isRequired,
-};
- */
+
 export default function HeaderContainer({ children }) {
   const [ShowList, setShowList] = useState(false);
   const { ShowModal, setShowModal, headerModal, setHeaderModal } = useContext(ToggleContext);
@@ -96,5 +92,3 @@ export default function HeaderContainer({ children }) {
     </Header>
   );
 }
-
-/* HeaderContainer.propTypes = propTypes; */

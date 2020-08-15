@@ -28,7 +28,6 @@ GallerySec.ModalImg = ({ src, firstSrc, secondSrc, alt, children, ...RestProps }
       <source media="(min-width:650px)" srcSet={firstSrc} />
       <img src={src} alt={alt} style={{ display: 'block' }} />
     </picture>
-    {/*  <Image src={src} alt={alt} width={100} height={100} layout="responsive" quality={100} /> */}
     {children}
   </Pics>
 );

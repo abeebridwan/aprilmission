@@ -15,10 +15,6 @@ import {
   LogoGroup,
 } from './styles/header';
 
-/* const propTypes = {
-  children: PropTypes.elementType.isRequired,
-};
- */
 export default function Header({ children, ...restProps }) {
   return <MainHeader {...restProps}>{children}</MainHeader>;
 }
@@ -81,5 +77,3 @@ Header.Logo = function HeaderLogo({ src, ...restProps }) {
     />
   );
 };
-
-/* Header.propTypes = propTypes; */
