@@ -173,6 +173,7 @@ const ModalDatas = {
       <p>
         We had our first successful enrolment for the session 2020/2021 with two students ANN CLEMENT and HABIBU LAWAN enrolled in schools on full-time scholarship.
       </p>
+      <br />
       <p>
         For more information, please see our contact section below
       </p>
