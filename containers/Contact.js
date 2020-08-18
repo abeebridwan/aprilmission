@@ -59,13 +59,23 @@ const ContactContainer = ({ children }) => {
             </span>
           </div>
           <h3>Follow Us</h3>
-          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" rel="noreferrer">
+          <a
+            href="https://www.facebook.com/April-Mission-Foundation-104065528577722/"
+            target="_blank"
+            aria-label="Facebook"
+            rel="noreferrer"
+          >
             <FontAwesomeIcon icon={faFacebook} size="lg" />
           </a>
           <a href="https://www.twitter.com" target="_blank" aria-label="Twitter" rel="noreferrer">
             <FontAwesomeIcon icon={faTwitter} size="lg" />
           </a>
-          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/aprilmissionfoundation/"
+            target="_blank"
+            aria-label="Instagram"
+            rel="noreferrer"
+          >
             <FontAwesomeIcon icon={faInstagram} size="lg" />
           </a>
         </Contact.SmallGroup>
