@@ -57,7 +57,7 @@ const ProjectContainer = ({ children }) => {
                 setprojectModal(!projectModal);
               }}
             >
-              Appy Now!
+              Apply Now!
             </Slider.Button>
           </span>
         </Project.Item>
