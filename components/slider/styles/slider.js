@@ -39,12 +39,17 @@ export const Number = styled.div`
 `;
 
 export const Image = styled.picture`
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   & img {
-    max-width: 100%;
     height: 500px;
-    width: 2000px;
+    max-width: 100%;
     filter: grayscale(90%);
     filter: brightness(40%);
+    border-radius: 70%;
 
     @media (min-width: 415px) {
       & {
