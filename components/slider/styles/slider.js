@@ -47,7 +47,8 @@ export const Image = styled.picture`
   & img {
     height: 500px;
     width: auto;
-    heigth: auto;
+    min-width: 200px;
+    min-height: 200px;
     max-width: 100%;
     filter: grayscale(90%);
     filter: brightness(40%);
