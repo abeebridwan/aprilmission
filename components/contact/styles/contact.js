@@ -128,7 +128,9 @@ export const SmallGroup = styled.div`
     border-radius: 5px;
     background-color: #f67d4a;
     color: #fff;
-    font-weight: 800;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 20px;
     cursor: pointer;
     margin-bottom: 0;
     &:hover {

@@ -46,6 +46,8 @@ export const Image = styled.picture`
   justify-content: center;
   & img {
     height: 500px;
+    width: auto;
+    heigth: auto;
     max-width: 100%;
     filter: grayscale(90%);
     filter: brightness(40%);
@@ -208,12 +210,12 @@ export const SubTitle = styled.p`
 export const Button = styled.button`
   background-color: ${({ bg }) => (bg ? 'transparent' : 'rgb(248, 127, 75)')};
   margin-top: ${({ header }) => (header ? '0' : '15px')};
-  font-weight: 650;
+  font-weight: bold;
   padding: ${({ header }) => (header ? '0px 6px' : '8px 12px 9px')};
   display: inline-block;
   border: ${({ bg }) => (bg ? '1px solid #fff !important' : '1px solid #f67d4a')};
   border-bottom: ${({ bg }) => (bg ? '2px solid #fff !important' : '1px solid #f67d4a')};
-
+  text-shadow: 2px 2px 4px #000000;
   border-radius: 5px;
   height: ${({ header }) => (header ? '32px' : '35px')};
   cursor: pointer;
